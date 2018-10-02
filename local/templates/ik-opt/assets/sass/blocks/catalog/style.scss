@@ -1,0 +1,857 @@
+.catalog {
+  overflow: hidden;
+  padding-top: 30px;
+  &.is-bg-white {
+    background: #fff;
+  }
+  &__list {
+    @extend .row;
+    &__title {
+
+    }
+    & .item {
+      height: 420px;
+      padding-bottom: 20px;
+      margin-bottom: 8px;
+      margin-top: 2px;
+      @extend .col-6;
+      @extend .col-lg-8;
+      @extend .col-md-12;
+      @extend .col-sm-24;
+      &__wrap {
+        display: table;
+        @extend .row;
+        @extend .row-table;
+        height: 100%;
+        text-align: center;
+        background: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        @include hover {
+          box-shadow: 0 0 0 2px $app-color-1;
+          & .item__content__img {
+            &__pic {
+              opacity: 0.3;
+              @extend .infinite;
+              animation-duration: 4s;
+            }
+            &__btn {
+              display: block;
+            }
+          }
+        }
+      }
+      &__content {
+        position: relative;
+        @extend .col;
+        &__status {
+          position: absolute;
+          top: 5px;
+          right: 0;
+          z-index: 1;
+          & div {
+            display: block;
+            margin-bottom: 3px;
+            float: right;
+            clear: both;
+            background: #fff;
+            border-radius: 4px 0 0 4px;
+            padding: 0px 5px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.7px;
+          }
+          &__skid {
+            background: #ffe217!important;
+          }
+          &__rasp {
+            background: #ff4747!important;
+            color: #fff;
+          }
+          &__new {
+            background: #8bc34a!important;
+            color: #fff;
+          }
+        }
+        &__img {
+          position: relative;
+          overflow: hidden;
+          @extend .row;
+          @extend .row-table;
+          height: 250px;
+          &__wrap {
+            @extend .col;
+          }
+          &__pic {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-size: cover;
+            background-position: center;
+            @extend .animated;
+            @extend .pulse;
+          }
+          &__btn {
+            @extend .animated;
+            @include transition();
+            @extend .fadeIn;
+            display: none;
+
+            &__click {
+              background: #000000;
+              border-color: #000000;
+            }
+            & .btn {
+              font-size: 12px;
+              letter-spacing: 0.7px;
+              margin-bottom: 6px;
+              vertical-align: middle;
+              height: auto;
+              padding-bottom: 2px;
+              font-family: $font-2;
+            }
+          }
+        }
+        &__name {
+          display: block;
+          color: #000000;
+          margin: 10px;
+          font-size: 14px;
+          letter-spacing: 0.9px;
+          text-decoration: underline;
+          font-weight: bold;
+        }
+        &__size {
+          font-size: 11px;
+          color: #888;
+          letter-spacing: 0.3px;
+        }
+        &__price {
+          text-align: left;
+          margin: 0 10px;
+          font-size: 11px;
+          & b {
+            font-size: 18px;
+            margin-right: 7px;
+          }
+          &__opt {
+            & i {
+              margin-left: 5px;
+              font-style: normal;
+              position: absolute;
+              letter-spacing: 0.3px;
+              font-size: 10px;
+              background: $app-color-1;
+              color: #fff;
+              padding: 0 5px;
+              border-radius: 3px;
+              @include after {
+                position: absolute;
+                bottom: 0px;
+                left: -7px;
+                margin-left: -7px;
+                border: 8px solid transparent;
+                border-right: 8px solid $app-color-1;
+              }
+            }
+          }
+          &__roz {
+
+          }
+        }
+      }
+    }
+    &.is-3 {
+      & .item {
+        @extend .col-8;
+        @extend .col-lg-12;
+        @extend .col-md-24;
+        @extend .col-sm-24;
+      }
+    }
+  }
+  &__list-cat {
+    @extend .row;
+    &__title {
+      & h1 {
+        padding: 0 15px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+      }
+    }
+    & .item {
+      height: 320px;
+      padding-bottom: 20px;
+      margin-bottom: 8px;
+      margin-top: 2px;
+      @extend .col-8;
+      @extend .col-lg-12;
+      @extend .col-md-24;
+      @extend .col-sm-24;
+      &__wrap {
+        display: table;
+        @extend .row;
+        @extend .row-table;
+        height: 100%;
+        text-align: center;
+        background: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        @include hover {
+          box-shadow: 0 0 0 2px $app-color-1;
+          & .item__content__img {
+            &__pic {
+              opacity: 0.3;
+              @extend .infinite;
+              animation-duration: 4s;
+            }
+            &__btn {
+              display: block;
+            }
+          }
+        }
+      }
+      &__content {
+        position: relative;
+        @extend .col;
+        &__img {
+          position: relative;
+          overflow: hidden;
+          @extend .row;
+          @extend .row-table;
+          height: 250px;
+          &__wrap {
+            @extend .col;
+          }
+          &__pic {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-size: cover;
+            background-position: center;
+            @extend .animated;
+            @extend .pulse;
+          }
+          &__btn {
+            @extend .animated;
+            @include transition();
+            @extend .fadeIn;
+            display: none;
+
+            &__click {
+              background: #000000;
+              border-color: #000000;
+            }
+            & .btn {
+              font-size: 12px;
+              letter-spacing: 0.7px;
+              margin-bottom: 6px;
+              vertical-align: middle;
+              height: auto;
+              padding-bottom: 2px;
+              font-family: $font-2;
+            }
+          }
+        }
+        &__name {
+          display: block;
+          color: #000000;
+          margin: 10px 10px 0;
+          font-size: 17px;
+          letter-spacing: 1.5px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &__detail {
+    padding-bottom: 50px;
+    &__title {
+      font-weight: bold;
+      padding: 2px 0 9px;
+      letter-spacing: 0.4px;
+      font-size: 21px;
+      @include media(lg){
+        text-align: center;
+      }
+    }
+    &__img {
+      position: relative;
+      overflow: hidden;
+      @extend .row;
+      @extend .row-table;
+      height: 300px;
+      margin-top: 2px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #FFFFFF;
+      background: #fff;
+      @include hover {
+        cursor: pointer;
+        box-shadow: 0 0 2px 2px $app-color-1;
+        & .catalog__detail__img__btn {
+          display: table-cell;
+        }
+      }
+      &__wrap {
+        display: table;
+        @extend .row;
+        @extend .row-table;
+        vertical-align: middle;
+        height: 100%;
+        text-align: center;
+        background: #fff;
+        padding: 10px;
+      }
+      &__pic {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: cover;
+        background-position: center;
+        @extend .animated;
+        @extend .pulse;
+      }
+      &__btn {
+        width: 100%;
+        @extend .animated;
+        @include transition();
+        @extend .fadeIn;
+        display: none;
+        vertical-align: middle;
+        text-align: center;
+
+        & svg {
+          width: 70px;
+          fill: #fff;
+        }
+      }
+    }
+    &__inf {
+      @extend .row;
+      @extend .row-table;
+      @include media(lg){
+        margin: 0;
+      }
+      @include media(md){
+        margin-top: 10px;
+      }
+      &__left ,
+      &__right {
+        @extend .col-12;
+        @extend .col-md-12;
+      }
+      &__left {
+        position: relative;
+        @include before(){
+          position: absolute;
+          bottom: 6px;
+          width: 100%;
+          border-bottom: 1px dotted #c9c9c9;
+        }
+        & span {
+          color: #0f0f0f;
+          font-size: 15px;
+          display: inline-block;
+          background: #fff;
+          position: relative;
+          padding-right: 4px;
+        }
+      }
+      &__right {
+        & a, span {
+          position: relative;
+          display: inline-block;
+          padding: 0 4px;
+        }
+      }
+    }
+    &__nal {
+      & svg {
+        width: 20px;
+        vertical-align: middle;
+      }
+      & span {
+        vertical-align: middle;
+        font-size: 13px;
+        display: inline-block;
+        padding: 0 4px;
+      }
+      &.is-empty {
+        & svg {
+          fill: #ccc;
+        }
+      }
+    }
+    &__table-size {
+      & svg {
+        width: 26px;
+        vertical-align: middle;
+        margin-right: 5px;
+        fill: $color-link;
+      }
+      & a {
+        vertical-align: middle;
+        font-size: 13px;
+        border-bottom: 1px dotted #418ee6;
+      }
+    }
+    &__text {
+      & p {
+        line-height: 1.9em;
+      }
+    }
+    &__dostavka {
+      background: #fff;
+      overflow: hidden;
+      padding: 20px;
+      border: 1px solid #e2dfdf;
+      @include media(lg){
+        margin-top: 20px;
+      }
+      &__title {
+        font-weight: bold;
+        padding: 2px 0 9px;
+        letter-spacing: 0.6px;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      &__list {
+        & .item {
+          min-height: 40px;
+          margin-bottom: 15px;
+          &__wrap {
+          }
+          &__icon {
+            position: absolute;
+            & svg {
+              width: 40px;
+              fill: $color-link;
+            }
+          }
+          &__text {
+            padding-left: 50px;
+            padding-top: 2px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &__price {
+      text-align: center;
+      margin-top: 12px;
+      & strong {
+        font-family: $font-2;
+        margin-right: 10px;
+        font-size: 30px;
+        line-height: 20px;
+        color: $app-color-1;
+      }
+      & span {
+
+      }
+    }
+    &__links {
+      margin-top: 5px;
+      text-align: center;
+      & a {
+        font-size: 13px;
+        letter-spacing: 0.7px;
+        border-bottom: 1px dotted #418ee6;
+      }
+    }
+    &__radio {
+      &__title {
+        font-weight: 300;
+        margin-right: 15px;
+        font-size: 13px;
+        letter-spacing: 0.6px;
+        color: #6f6f6f;
+        @include media(md){
+          display: block;
+        }
+      }
+      & .form-radio {
+        @include media(md){
+          display: block;
+          margin: 10px 0;
+        }
+      }
+    }
+    &__count {
+
+    }
+    &__zak {
+      & .col-12 {
+        padding: 10px 0;
+      }
+    }
+    &__btn {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      & .btn {
+        display: block;
+        width: 90%;
+        margin-right: 10px;
+        @include media(md){
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__tabPrice {
+      $price_background : #fdfdfd;
+      position: relative;
+      //background: $price_background;
+      padding: 10px 30px;
+      margin: 20px 0;
+
+      @include before(){
+        display: none;
+        width: 1000px;
+        height: 100%;
+        top: 0;
+        left: -1000px;
+        position: absolute;
+        background: $price_background;
+        z-index: 0;
+      }
+      @include after(){
+        width: 1000px;
+        height: 100%;
+        top: 0;
+        right: -1000px;
+        position: absolute;
+        z-index: 0;
+        background: $price_background;
+      }
+      @include media(md){
+        padding: 10px;
+      }
+      &__name-tab {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        font-size: 13px;
+        font-weight: bold;
+        color: #548de2;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        &__size {
+          position: absolute;
+          top: 0;
+          left: 380px;
+          & svg {
+            width: 20px;
+            position: absolute;
+            margin-left: -10px;
+            fill: #ccc;
+            left: -20px;
+            top: 0px;
+
+            &:last-child {
+              left: auto;
+              right: -30px;
+            }
+          }
+        }
+        &__color {
+          position: absolute;
+          left: 12px;
+          & svg {
+            width: 20px;
+            left: 50%;
+            top: 27px;
+            position: absolute;
+            margin-left: -10px;
+            fill: #ccc;
+          }
+        }
+      }
+      &__wrap {
+        overflow: auto;
+      }
+      &__table {
+        margin: 30px 0 13px;
+        display: table;
+        width: 100%;
+        position: relative;
+      }
+      &__row {
+        display: table-row;
+        width: 100%;
+      }
+      &__coll {
+        display: table-cell;
+        width: auto;
+        min-width: 60px;
+        &__name {
+          & span {
+            width: 100%;
+          }
+        }
+        &.is-center {
+          text-align: center;
+        }
+        &.is-top {
+          font-size: 12px;
+          //border: 1px solid #f6f6f6;
+          font-weight: bold;
+        }
+        &.is-left-name {
+          position: relative;
+          color: #3e3d3d;
+          font-size: 13px;
+          padding: 0 8px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__filter {
+    @include media(md) {
+      display: none;
+    }
+    &__wrap {
+    }
+    &__title {
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+      margin-top: -5px;
+      padding-bottom: 6px;
+    }
+    &__cat {
+      &__title {
+        position: relative;
+        font-size: 21px;
+        font-weight: bold;
+        letter-spacing: 0.8px;
+        & a,
+        & span {
+          background: $background;
+          padding-right: 15px;
+        }
+        @include before(){
+          position: absolute;
+          z-index: -1;
+          left: 0;
+          top: 18px;
+          height: 1px;
+          width: 100%;
+          background: #dbdbdb;
+        }
+      }
+      & ul {
+        & ul {
+          padding: 5px 16px;
+          & li {
+            display: block;
+            & a {
+              position: relative;
+              display: block;
+              padding: 4px 0;
+              letter-spacing: 0.5px;
+              font-size: 14px;
+              color: #000000;
+              @include hover {
+                color: $color-link;
+                & span {
+                  border-bottom: 1px dotted #418ee6;
+                }
+              }
+              @include before(){
+                position: absolute;
+                top: 13px;
+                left: -13px;
+                width: 4px;
+                height: 4px;
+                background: #848484;
+                transition: 0.25s ease 0s;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__param {
+      margin-top: 20px;
+      &__title {
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: 0.8px;
+        & svg {
+          width: 13px;
+          position: relative;
+          top: 2px;
+          left: 2px;
+          fill: $app-color-1;
+        }
+      }
+      &__check {
+        &__list {
+          padding: 10px 0 0 1px;
+          &.is-hidden {
+            height: 143px;
+            overflow: hidden;
+          }
+          & .item {
+            display: block;
+            margin-bottom: 3px;
+            &__check {
+              display: inline-block;
+              &__control {
+                display: inline-block;
+                position: relative;
+                top: -1px;
+              }
+              &__text {
+                display: inline-block;
+                font-size: 13px;
+                padding: 0 5px;
+                color: #929292;
+              }
+            }
+          }
+        }
+        &__btn {
+          margin-bottom: 10px;
+          & a {
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-bottom: 1px dotted #418ee6;
+          }
+        }
+      }
+    }
+    &__price {
+      margin-top: 10px;
+      &__control {
+        border: none;
+        background: #dbdbdb;
+        height: 5px;
+        border-radius: 0 !important;
+        cursor: pointer;
+
+        & .ui-widget-header {
+          border: none;
+          background: $app-color-1;
+          height: 5px;
+          border-radius: 0 !important;
+          cursor: pointer;
+        }
+        & .ui-slider-handle {
+          border: none;
+          background: $app-color-1;
+          width: 15px;
+          height: 15px;
+          border-radius: 15px !important;
+          cursor: pointer;
+        }
+      }
+      &__value {
+        margin: 15px 0 5px 0;
+        & label {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 10px;
+          font-size: 14px;
+        }
+        & input {
+          display: inline-block;
+          vertical-align: middle;
+          width: 56px;
+          height: 32px;
+          background: #fff;
+          font-size: 15px;
+          color: #5a5a5a;
+          border: 1px solid #dbdbdb;
+          text-align: center;
+          border-radius: 7px;
+        }
+      }
+    }
+    &__btn {
+      margin-top: 20px;
+      & .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__sort {
+    margin-bottom: 10px;
+    &__to {
+      &__title {
+        @include media(md){
+          display: none;
+        }
+      }
+      & a {
+        padding: 0 10px;
+        font-size: 14px;
+        color: #000000;
+        & svg {
+          display: inline-block;
+          width: 20px;
+          vertical-align: middle;
+          fill: $app-color-1;
+        }
+        @include active {
+          color: $app-color-1;
+          padding-right: 0;
+          & span {
+            border-bottom: 1px dotted $app-color-1;
+            font-weight: normal;
+          }
+        }
+        @include hover {
+          color: $app-color-1;
+          & span {
+            border-bottom: 1px dotted $app-color-1;
+          }
+        }
+      }
+    }
+  }
+  &__seo {
+    &__text {
+      margin: 20px 0;
+      & p {
+        font-size: 13px;
+        letter-spacing: 0.3px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

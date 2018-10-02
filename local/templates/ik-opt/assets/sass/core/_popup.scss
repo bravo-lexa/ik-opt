@@ -1,0 +1,150 @@
+.popup {
+  position: relative;
+  display: none;
+  overflow-x: hidden;
+  max-width: 600px;
+  width: 100%;
+
+  @include animation(popup-animated);
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+
+  &.is-title {
+    & .popup-title {
+      padding: 20px 44px 10px;
+      background: $app-color-2;
+      color: #fff;
+      font-size: 33px;
+      font-weight: bold;
+      letter-spacing: 0.9px;
+      text-align: center;
+    }
+    .fancybox-button {
+      color: #fff;
+    }
+  }
+  &.is-big {
+    max-width: 1200px;
+  }
+  &.is-form {
+    max-width: 420px;
+    & .form-group {
+      margin-bottom: 13px;
+    }
+  }
+  &.is-log {
+    background: #060606d4;
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    max-width: none;
+    width: auto;
+
+    & .popup-content {
+      padding: 10px 44px;
+      @include media(md){
+        padding: 10px;
+        text-align: center;
+
+        & svg {
+          margin-top: 20px;
+        }
+      }
+    }
+    & .popup-title {
+      color: #32d847;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 16px;
+    }
+  }
+
+  &-content {
+    padding: 44px;
+    display: block;
+  }
+
+  &-text {
+    & p {
+      margin-bottom: 20px;
+    }
+  }
+  &-form {
+    &-lic {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 12px;
+      &-icon {
+        vertical-align: middle;
+        display: inline-block;
+        margin-top: 3px;
+        width: 15px;
+        & svg {
+          fill: #b72d2d;
+        }
+      }
+      & span {
+        vertical-align: middle;
+        color: #000;
+        font-size: 13px;
+      }
+      @include hover {
+        & span {
+          color: $app-color-1;
+        }
+      }
+      &:focus {
+        color: $color ;
+      }
+    }
+    &-btn {
+      &.is-center {
+        text-align: center;
+      }
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    &-phone {
+      position: absolute;
+      z-index: -1;
+      top: 271px;
+      left: 4px;
+      width: 120px;
+      transform: rotate(10deg);
+      & svg {
+        fill: #f5f5f5;
+      }
+      &.is-right {
+        left: auto;
+        right: 4px;
+        transform: rotate(-19deg) scale(-1, 1);
+      }
+    }
+  }
+  // * При открытии
+  &.fancybox-content {}
+}
+// Настроки
+@include keyframes(popup-animated){
+  from {
+    opacity: 0;
+    transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) perspective( 600px ) rotateX( 0 );
+  }
+}
+@at-root .fancybox-bg { background: #eee;}

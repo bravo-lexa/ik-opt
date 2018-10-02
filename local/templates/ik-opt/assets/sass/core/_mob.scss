@@ -1,0 +1,109 @@
+.mob {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(35,35,35,0.82);
+  z-index: 50;
+
+  &-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background: #2c2c2c;
+    border-radius: 0 0 8px 8px;
+
+    top: 0;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 256px;
+    overflow: auto;
+
+    padding-top: 150px;
+    &-nav {
+      & li {
+        & a {
+          display: block;
+          padding: 8px 40px;
+
+          font-size: 13px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #8495a0;
+          transition: color .2s;
+          @include hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+    &-footer {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  &-btn {
+    position: absolute;
+    z-index: 99;
+    left: 10px;
+    top: 10px;
+
+    cursor: pointer;
+    height: 20px;
+    width: 30px;
+
+    & span {
+      margin-bottom: 5px;
+      position: absolute;
+      width: 30px;
+      height: 4px;
+      background: #fff;
+      @include transition(.3,'');
+      border-radius: 1px;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2n){
+        top: 8px;
+      }
+      &:nth-child(3n){
+        top: 16px;
+      }
+    }
+    &.active{
+      span {
+        display: block;
+        background: #fff;
+      }
+      span:nth-child(1) {
+        top: 7px;
+        @include transform(rotate(45deg));
+      }
+      span:nth-child(2n){
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      span:nth-child(3n){
+        top: 8px;
+        @include transform(rotate(-45deg));
+      }
+    }
+  }
+
+  @at-root .js-mob {
+    &-menu-open {
+      & .mob {
+        display: block;
+        &-menu {
+          display: block;
+        }
+      }
+    }
+  }
+}

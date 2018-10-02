@@ -1,0 +1,224 @@
+// * Работа с блоками сайта
+// *
+
+$media: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: $container + 60px
+) !default;
+$media-max:(
+        xl: $container + 59px,
+        lg: 992px - 1px,
+        md: 768px - 1px,
+        sm: 576px - 1px,
+        xs: 360 - 1px,
+) !default;
+$container-max-widths: (
+        xl: $container,
+        lg: 960px,
+        md: 720px,
+        sm: 540px,
+        xs: 100%,
+) !default;
+
+
+%after {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+}
+%block {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    float: left;
+    min-height: 1px;
+}
+%margin {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+%padding {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+%col {
+    @extend %block;
+    @extend %padding;
+    width: 100%;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    position: relative;
+    @extend %after;
+    &-fluid {
+        position: relative;
+        width: 100%;
+        @extend %after;
+
+        &-bg {
+            position: absolute;
+            z-index: -2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    // Адаптивность
+    @each $name, $size in $media {
+        @media (min-width: $size) {
+            max-width: map-get($container-max-widths, $name)!important;
+            @if($size == 0) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+.row {
+    @extend %margin;
+    @extend %after;
+
+    // * Как таблица
+    // .row-table - Основной
+    // .row-table-top - По верхнеему краю
+    &-table {
+        display: table;
+        width: 100%;
+
+        margin-right: 0;
+        margin-left: 0;
+        &>.col {
+            width: auto;
+            display: table-cell;
+            float: none;
+            vertical-align: middle;
+
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @for $i from 1 through 24 {
+            &>.col-#{$i} {
+                display: table-cell;
+                float: none;
+                vertical-align: middle;
+
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        &-top {
+            @for $i from 1 through 24 {
+                .col-#{$i} {
+                    vertical-align: top;
+                }
+            }
+        }
+        &-bottom {
+            @for $i from 1 through 24 {
+                .col-#{$i} {
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+
+    // * Выравнивание
+    // .row-right - По правому краю
+    &-right {
+        .col {
+            float: right;
+        }
+        @for $i from 1 through 24 {
+            .col-#{$i} {
+                float: right;
+            }
+        }
+    }
+}
+.col {
+    @extend %col;
+    &-0 {
+        width: 0;
+    }
+}
+@for $i from 1 through 24 {
+    .col-#{$i} {
+        @extend %col;
+    }
+}
+@each $name, $size in $media {
+    @for $i from 1 through 24 {
+        .col-#{$name}-#{$i} {
+            @extend %col;
+        }
+    }
+}
+
+// * Адаптация
+// * Просто col
+
+@media (min-width: map-get($media, 'sm')) {
+    @for $i from 1 through 24 {
+        .col-#{$i} {
+            width: (100% * $i) / 24;
+        }
+    }
+}
+// * Адаптивыны col
+@each $name, $size in $media-max {
+    @media (max-width: $size) {
+        @for $i from 1 through 24 {
+            .col-#{$name}-#{$i} {
+                width: (100% * $i) / 24;
+            }
+        }
+    }
+    @media (max-width: $size) {
+        .row-#{$name}-table-none {
+            width: auto;
+            display: block;
+            float: none;
+            margin-left: -15px;
+            margin-right: -15px;
+
+            @for $i from 1 through 24 {
+                .col-#{$i} {
+                    display: block;
+                    float: left;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+
+                .col-#{$name}-#{$i} {
+                    display: block;
+                    float: left;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+    // * Скрываем блок в нужном размере
+    @media (max-width: $size) {
+        @for $i from 1 through 24 {
+            .col-#{$name}-none {
+                display: none!important;
+            }
+        }
+    }
+}

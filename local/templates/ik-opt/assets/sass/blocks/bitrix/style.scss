@@ -1,0 +1,7 @@
+.bitrix {
+  &-include {
+    & > div {
+      display: initial;
+    }
+  }
+}

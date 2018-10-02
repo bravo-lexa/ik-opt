@@ -1,0 +1,655 @@
+.index {
+  &__top-img {
+    $item-height: 200px;
+    $item-padding: 20px;
+    background: #f6f6f6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+    & .slider {
+      & .item {
+        display: block;
+        width: 100%;
+        height: $item-height*2 + $item-padding;
+        position: relative;
+        @include media(md){
+          height: 220px;
+        }
+
+        &__wrap {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+
+        &__img {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+        }
+        &__content {
+          display: table;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          text-align: right;
+          @include media(md){
+            padding-bottom: 40px;
+          }
+          &__wrap {
+            display: table-cell;
+            vertical-align: bottom;
+          }
+        }
+        &__title {
+          font-size: 46px;
+          font-weight: bold;
+          letter-spacing: 0.5px;
+          color: #fff;
+          text-shadow: 0 0 5px #6f6f6f59;
+          & span {
+            background: $app-color-1;
+            padding: 2px 20px;
+          }
+          @include media(md){
+            font-size: 25px;
+            & span {
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+    & .block {
+      &:last-child .item {
+        margin: 0;
+      }
+      & .item {
+        display: block;
+        width: 100%;
+        height: $item-height;
+        position: relative;
+        margin-bottom: 20px;
+        @include media(md){
+          margin-top: 20px;
+        }
+
+        &__wrap {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+
+        &__img {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+        }
+        &__content {
+          display: table;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          text-align: center;
+          &__wrap {
+            display: table-cell;
+            vertical-align: bottom;
+          }
+          @include media(lg){
+            padding: 20px 0;
+          }
+        }
+        &__title {
+          font-size: 17px;
+          font-weight: bold;
+          letter-spacing: 0.8px;
+          color: #fff;
+          text-shadow: 0 0 5px #6f6f6f59;
+          & span {
+            background: #000;
+            padding: 2px 20px;
+          }
+        }
+      }
+    }
+  }
+  &__utp {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    &__list {
+      @extend .row;
+      @extend .row-table;
+      @extend .row-lg-table-none;
+      padding: 0 40px;
+      @include media(md){
+        display: none;
+      }
+      & .item {
+        @extend .col;
+        @extend .col-lg-12;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &__icon {
+          position: relative;
+          & svg {
+            top: -2px;
+            position: absolute;
+            width: 50px;
+            fill: $app-color-1;
+          }
+        }
+        &__text {
+          padding-left: 80px;
+        }
+      }
+    }
+  }
+  &__catalog {
+    &__top {
+      position: relative;
+      @include before(){
+        position: absolute;
+        left: 0;
+        top: 20px;
+        height: 1px;
+        width: 100%;
+        background: #dbdbdb;
+      }
+      &__btn {
+        text-align: center;
+        & ul {
+          position: relative;
+          display: inline-block;
+          margin-bottom: 20px;
+          background: $background;
+          padding: 0 20px;
+          & li {
+            display: inline-block;
+            margin-bottom: 10px;
+            @include media(sm){
+              display: block;
+            }
+          }
+        }
+        & .btn {
+          position: relative;
+          margin: 0 10px;
+          background: transparent;
+          color: $app-color-1;
+          @include before() {
+            content: '';
+            position: absolute;
+            bottom: -21px;
+            left: 50%;
+            margin-left: -12px;
+            border: 12px solid transparent;
+            border-top: 8px solid $app-color-1;
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+            -moz-transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            @include media(sm){
+              display: none;
+            }
+          }
+          &.active {
+            background: $app-color-1;
+            color: #fff;
+            &:before {
+              opacity: 1;
+            }
+          }
+          @include media(md){
+            padding: 11px;
+            height: 40px;
+            margin: 0;
+            font-size: 11px;
+          }
+          @include media(sm){
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__bottom {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  &__news {
+    &__title {
+      text-align: center;
+      @include before(){
+        position: absolute;
+        left: 0;
+        top: 20px;
+        height: 1px;
+        width: 100%;
+        background: #dbdbdb;
+      }
+      & span {
+        font-size: 21px;
+        font-weight: bold;
+        display: inline-block;
+        background: #f6f6f6;
+        z-index: 2;
+        position: relative;
+        padding: 2px 19px;
+        letter-spacing: 2.3px;
+      }
+    }
+    &__list {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      @include media(md){
+        margin-bottom: 0;
+      }
+      @extend .row;
+      & .item {
+        position: relative;
+        @extend .col-8;
+        margin-bottom: 20px;
+        &__content {
+          &__img {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            @extend .row;
+            @extend .row-table;
+            height: 160px;
+            &__wrap {
+              @extend .col;
+            }
+            &__pic {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background-size: cover;
+              background-position: center;
+              @extend .animated;
+              @extend .pulse;
+            }
+            &__btn {
+              @extend .animated;
+              @include transition();
+              @extend .fadeIn;
+              display: none;
+
+              &__click {
+                background: #000000;
+                border-color: #000000;
+              }
+              & .btn {
+                font-size: 12px;
+                letter-spacing: 0.7px;
+                margin-bottom: 6px;
+                vertical-align: middle;
+                height: auto;
+                padding-bottom: 2px;
+                font-family: $font-2;
+              }
+            }
+          }
+          &__title {
+            font-size: 19px;
+            font-weight: bold;
+          }
+          &__text {
+            font-size: 12px;
+          }
+          &__date {
+            position: absolute;
+            right: 12px;
+            top: 123px;
+            background: #f6f6f6;
+            padding: 1px 7px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #636363;
+          }
+          &__btn {
+            & a {
+              border-bottom: 1px dotted $app-color-1;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+    &__bottom {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  &__feedback {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 50px 0 10px;
+    margin-top: 20px;
+    @include before(){
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      top: -5px;
+      background: linear-gradient(0deg, $app-color-1, $background);
+    }
+    &__bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background: url("../images/feedback.jpg") center;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      @include after(){
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #418ee6ad;
+      }
+    }
+    &__title {
+      font-size: 43px;
+      font-weight: bold;
+      letter-spacing: 0.7px;
+      @include media(md){
+        font-size: 27px;
+        margin-bottom: 10px;
+      }
+    }
+    &__text {
+      font-family: $font-2;
+      letter-spacing: 0.5px;
+      margin-bottom: 40px;
+      @include media(md){
+        font-size: 12px;
+      }
+    }
+    &__form {
+      padding-bottom: 50px;
+      @include media(xl){
+        padding-bottom: 0;
+      }
+      &__group {}
+      & .form-group {}
+      & .form-input-control {
+        padding: 13px 15px 11px;
+        border-color: transparent;
+      }
+      & .form-input-control ,
+      & .btn {
+        margin-bottom: 20px;
+      }
+    }
+    &__lic {
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 5px;
+      text-align: center;
+      font-size: 11px;
+      color: #5a5a5a;
+      margin-bottom: 40px;
+    }
+  }
+  &__partners {
+    margin-bottom: 50px;
+    overflow: hidden;
+    &__wrap {}
+    &__title {
+      text-align: center;
+      font-size: 35px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    &__list {
+      & .item {
+        &__img {
+          margin: auto;
+          max-width: 150px;
+          filter: grayscale(100%);
+        }
+        &:hover {
+          &__img {
+            filter: grayscale(0%);
+          }
+        }
+      }
+      & .owl-nav.disabled {
+        display: block;
+      }
+    }
+  }
+  &__inform {
+    padding: 20px 0;
+    margin: 20px 0;
+    background: #fff;
+    &__comment {
+      padding-left: 40px;
+      &__title {
+        text-align: center;
+        font-size: 21px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        letter-spacing: 0.8px;
+        border-bottom: 1px solid #dbdbdb;
+        padding-bottom: 8px;
+        padding-top: 10px;
+        @include media(md){
+          margin-left: -40px;
+        }
+      }
+      &__list {
+        & .item {
+          position: relative;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #dbdbdb;
+          &:last-child {
+            border: 0;
+          }
+          &__icon {
+            position: absolute;
+            left: -33px;
+            top: 0px;
+            & svg {
+              width: 25px;
+              transform: scaleX(-1);
+              fill: #3d84d6a6;
+            }
+          }
+          &__text {
+            font-size: 13px;
+            margin-bottom: 20px;
+          }
+          &__btn {
+            margin-bottom: 20px;
+            & a {
+              display: inline-block;
+              border-bottom: 1px dotted $color-link;
+              font-size: 13px;
+            }
+          }
+          &__inf {
+            margin-bottom: 10px;
+            font-weight: bold;
+            &__name {
+              display: inline-block;
+            }
+            &__rating {
+              padding-left: 10px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+      &__btn {
+        padding: 20px 0;
+        text-align: center;
+      }
+    }
+    &__content {
+      text-align: left;
+      @include media(md){
+        text-align: center;
+      }
+      &__title {
+        font-size: 21px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        letter-spacing: 0.8px;
+        padding-bottom: 8px;
+        padding-top: 10px;
+      }
+      &__text {
+        &__bottom {
+          &__icon {
+            & svg {
+              width: 110px;
+              margin: 22px auto;
+              display: block;
+              fill: #418ee6;
+              @extend .animated;
+              @extend .infinite;
+              @extend .pulse;
+            }
+          }
+          &__title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+          }
+        }
+      }
+      &__list {
+        & .item {
+          &__icon {}
+          &__text {}
+        }
+      }
+    }
+  }
+  &__sot {
+    position: relative;
+    margin-bottom: 50px;
+    &__title {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+      & span {
+        font-size: 21px;
+        font-weight: bold;
+        display: inline-block;
+        background: #f6f6f6;
+        z-index: 2;
+        position: relative;
+        padding: 2px 19px;
+        letter-spacing: 2.3px;
+      }
+      @include before(){
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 20px;
+        height: 1px;
+        width: 100%;
+        background: #dbdbdb;
+      }
+    }
+    &__list{
+      @extend .row;
+      & .item {
+        position: relative;
+        overflow: hidden;
+        @extend .col-8;
+        @extend .col-md-24;
+        &__wrap {
+          padding-right: 50px;
+        }
+        &__title {
+          font-size: 21px;
+          font-weight: bold;
+          margin-bottom: 5px;
+          letter-spacing: 2.3px;
+        }
+        &__text {
+          margin: 30px 0 ;
+        }
+        &__bottom {
+          margin-top: 20px;
+          position: relative;
+          color: $color;
+          &__icon {
+            position: absolute;
+            top: -2px;
+            & svg {
+              width: 50px;
+              fill: $app-color-1;
+            }
+          }
+          &__text {
+            padding-left: 70px;
+            @include media(md){
+              display: none;
+            }
+          }
+        }
+
+        &__next {
+          position: absolute;
+          top: 55px;
+          right: -15px;
+          & svg {
+            width: 90px;
+            fill: #418ee61f;
+          }
+        }
+        &:nth-child(3){
+          & .item__next {
+            display: none;
+            @include media(md){
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

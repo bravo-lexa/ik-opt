@@ -1,0 +1,245 @@
+// Изменения размера
+@mixin media($size) {
+  /*
+    xl: 1200px Комп
+    lg: 992px  Ноут
+    md: 758px  Планшет
+    sm: 576px  Мобилки перевернутые
+    xs: 360px  Мобилки
+  */
+  // Размеры экрана
+  $media-size: (
+      xl: 1199px,
+      lg: 992px - 1px,
+      md: 768px - 1px,
+      sm: 576px - 1px,
+      xs: 360 - 1px,
+  ) !default;
+
+  @media only screen and (max-width: map-get($media-size, $size)) {
+    @content;
+  }
+}
+
+@mixin media-custom($size) {
+  @media only screen and (max-width: $size + px) {
+    @content;
+  }
+}
+
+// Шрифт
+@mixin font($number) {
+  font-family: $font-2;
+}
+
+// Шовер
+@mixin hover {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+@mixin active {
+  &:active,
+  &.active,
+  &:active:focus,
+  &:active:hover,
+  &.active:focus,
+  &.active:hover {
+    @content;
+  }
+}
+@mixin hover-active {
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &:active:focus,
+  &:active:hover,
+  &.active:focus,
+  &.active:hover {
+    @content;
+  }
+}
+
+
+@mixin before($content: "") {
+  &:before {
+    content: '';
+    display: block;
+    @content;
+  }
+}
+@mixin after($content: "") {
+  &:after {
+    content: '';
+    display: block;
+    @content;
+  }
+}
+@mixin placeholder() {
+  &::-webkit-input-placeholder { @content }
+  &:-ms-input-placeholder { @content }
+  &::-ms-input-placeholder { @content }
+  &::placeholder { @content }
+}
+// CSS
+@mixin border-radius ($size) {
+  -moz-border-radius: $size;
+  -webkit-border-radius: $size;
+  border-radius: $size;
+}
+// Радиальный градиент
+@mixin linear-gradient($val_1,$val_2,$val_3) {
+  // * Пример
+  // * to bottom, rgba(11,11,12,0.43) 0% , #0b0b0c 100%
+
+  $code : ($val_1 + ',' + $val_2 + ',' +$val_3);
+
+  background: -webkit-linear-gradient(#{$code}); /* Safari 5.1-6.0 */
+  background: -o-linear-gradient(#{$code}); /* Opera 11.6-12.0 */
+  background: -moz-linear-gradient(#{$code}); /* Firefox 3.6-15 */
+  background: linear-gradient(#{$code}); /* Стандартный синтаксис */
+  background-repeat: repeat;
+  background-attachment: scroll;
+}
+@mixin linear-gradient-text($val_1,$val_2,$val_3) {
+  $code : ($val_1 + ',' + $val_2 + ',' +$val_3);
+  @include linear-gradient($val_1,$val_2,$val_3);
+  background-attachment: scroll;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin radial-gradient($val_1,$val_2,$val_3){
+  // * Пример
+  // * 40% 50%, #FAECD5, #CAE4D8
+
+  $code : ($val_1 + ',' + $val_2 + ',' +$val_3);
+
+  background: -webkit-radial-gradient(#{$code}); /* Safari 5.1-6.0 */
+  background: -o-radial-gradient(#{$code}); /* Opera 11.6-12.0 */
+  background: -moz-radial-gradient(#{$code}); /* Firefox 3.6-15 */
+  background: radial-gradient(#{$code}); /* Стандартный синтаксис */
+  background-repeat: repeat;
+  background-attachment: scroll;
+}
+// Анимации
+@mixin transition ($time : 0.3 ,$speed : ease-in-out) {
+  /*
+    Значения $speed:
+    ease 	Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует cubic-bezier(0.25,0.1,0.25,1).
+    linear 	Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует cubic-bezier(0,0,1,1).
+    ease-in 	Переход начинается медленно, а затем плавно ускоряется в конце. Соответствует cubic-bezier(0.42,0,1,1).
+    ease-out 	Переход начинается быстро и плавно замедляется в конце. Соответствует cubic-bezier(0,0,0.58,1).
+    ease-in-out 	Переход медленно начинается и медленно заканчивается. Соответствует cubic-bezier(0.42,0,0.58,1).
+    cubic-bezier(x1, y1, x2, y2) 	Позволяет вручную установить значения от 0 до 1 для кривой ускорения. На этом сайте вы сможете построить любую траекторию перехода.
+    initial 	Устанавливает значение свойства в значение по умолчанию.
+    inherit 	Наследует значение свойства от родительского элемента.
+  */
+  -webkit-transition: all #{$time}s #{$speed};
+  -moz-transition: all #{$time}s #{$speed};
+  -o-transition: all #{$time}s #{$speed};
+  transition: all #{$time}s #{$speed};
+}
+@mixin transition-custom ($content , $time : 0.3 , $speed : ease-in-out) {
+  /*
+  Значения $speed:
+  ease 	Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует cubic-bezier(0.25,0.1,0.25,1).
+  linear 	Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует cubic-bezier(0,0,1,1).
+  ease-in 	Переход начинается медленно, а затем плавно ускоряется в конце. Соответствует cubic-bezier(0.42,0,1,1).
+  ease-out 	Переход начинается быстро и плавно замедляется в конце. Соответствует cubic-bezier(0,0,0.58,1).
+  ease-in-out 	Переход медленно начинается и медленно заканчивается. Соответствует cubic-bezier(0.42,0,0.58,1).
+  cubic-bezier(x1, y1, x2, y2) 	Позволяет вручную установить значения от 0 до 1 для кривой ускорения. На этом сайте вы сможете построить любую траекторию перехода.
+  initial 	Устанавливает значение свойства в значение по умолчанию.
+  inherit 	Наследует значение свойства от родительского элемента.
+*/
+
+  -webkit-transition: #{$content} #{$time}s #{$speed};
+  -moz-transition: #{$content} #{$time}s #{$speed};
+  -o-transition: #{$content} #{$time}s #{$speed};
+  transition: #{$content} #{$time}s #{$speed};
+}
+
+@mixin translate($content) {
+  // * Пример
+  // * -50%, -50%  - По центру
+  -webkit-transform: translate($content);
+  -moz-transform: translate($content);
+  -ms-transform: translate($content);
+  -o-transform: translate($content);
+  transform: translate($content);
+}
+@mixin transform($content) {
+  /*
+    Значения:
+    matrix() — любое число
+    translate(), translateX(), translateY() — единицы длины (положительные и отрицательные), %
+    scale(), scaleX(), scaleY() — любое число
+    rotate() — угол (deg, grad, rad или turn)
+    skew(), skewX(), skewY() — угол (deg, grad, rad)
+  */
+  -webkit-transform: $content;
+  -moz-transform: $content;
+  -ms-transform: $content;
+  -o-transform: $content;
+  transform: $content;
+}
+
+@mixin animation($content){
+  -webkit-animation: #{$content};
+  -moz-animation: #{$content};
+  animation: #{$content};
+}
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+          eot: "?",
+          svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+          otf: "opentype",
+          ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

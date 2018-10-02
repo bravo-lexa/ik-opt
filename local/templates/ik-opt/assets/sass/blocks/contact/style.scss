@@ -1,0 +1,147 @@
+.contact {
+
+  &__title {
+    padding: 20px 0;
+  }
+  &__text {
+
+  }
+  &__group {
+    margin-bottom: 50px;
+    &__title {
+      position: relative;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-size: 20px;
+      & span {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+        background: #f9f9f9;
+        left: -20px;
+        padding-right: 25px;
+        padding-left: 20px;
+      }
+      @include before(){
+        position: absolute;
+        left: -999px;
+        top: 15px;
+        height: 1px;
+        width: 99999px;
+        background: #dbdbdb;
+      }
+    }
+    &__time {
+      margin-bottom: 20px;
+      letter-spacing: 0.7px;
+      &__title {
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: #ccc;
+      }
+      &__war {
+        margin-top: 10px;
+        letter-spacing: 1px;
+        color: #ff6155;
+      }
+    }
+    &__phone {
+      position: relative;
+      padding-left: 50px;
+      padding-top: 6px;
+      font-size: 11px;
+      color: #7d7d7d;
+      letter-spacing: 0.5px;
+      & svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: $app-color-1;
+        width: 40px;
+        height: 40px;
+      }
+      &__number {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        color: #000000;
+        vertical-align: middle;
+        &.is-big {
+          font-size: 19px;
+        }
+      }
+    }
+    &__mail {
+      position: relative;
+      margin: 10px 0;
+      padding-left: 50px;
+      padding-top: 6px;
+      font-size: 11px;
+      color: #7d7d7d;
+      letter-spacing: 0.5px;
+      & svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: $app-color-1;
+        width: 40px;
+        height: 40px;
+      }
+      &__address {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        color: #000000;
+        &.is-big {
+          font-size: 19px;
+        }
+      }
+    }
+    &__map {
+      position: relative;
+      margin-top: 20px;
+      padding-left: 50px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      & svg {
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        fill: $app-color-1;
+        width: 31px;
+        height: 31px;
+      }
+    }
+    &__user {
+      position: relative;
+      padding-left: 50px;
+      margin-bottom: 11px;
+      font-size: 11px;
+      color: #7d7d7d;
+      letter-spacing: 0.5px;
+      & svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: $app-color-1;
+        width: 40px;
+        height: 40px;
+      }
+      &__name {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        color: #000000;
+        &.is-big {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+  &__map {
+    box-shadow: 0 0 56px 12px rgba(13, 149, 232, 0.14);
+    border-top: 2px solid #4998e954;
+  }
+}

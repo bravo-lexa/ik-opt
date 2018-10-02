@@ -1,0 +1,86 @@
+//  Шифтов
+$font:         'PT Sans', sans-serif;   // Основной
+$font-2:       'Open Sans', cursive;    // Добавлчный шрифи
+$font-icon:    'Icon v2';               // Шрифт с иконками
+
+// *  Подключаем щрифты
+@include font-face('Circle', '/assets/fonts/Circe/Circe-Regular', normal, normal, eot woff ttf);
+@include font-face('Circle', '/assets/fonts/Circe/Circe-Bold', bold, normal, eot woff ttf);
+
+// Размер шрифта
+$font-size:                    0.9em      !default; // Стандартый шрифт
+$font-size-small:              0.8571em   !default;
+$font-size-big:                1.2em      !default;
+
+$line-height:                  1.6        !default;
+$letter-spacing:               0.3px      !default;
+
+// * Стандартная цветовая схема
+$background:                    #f9f9f9;
+$color:                         #2c2e32;
+
+// * Ссылки
+$color-link:                    #0269de;
+$color-link-hover: #2662de;
+
+// * Цвета приложения
+$app-color-1:                   #418ee6;
+$app-color-2:                   #2d6db7;
+
+// * Настойки
+$container:             1140px;      // 1140 default
+$container-aside:       270px;       // Боковой блок
+$container-margin:      20px;        // Отступ межу ними
+
+$link-underline:                none;
+$link-underline-hover:          none; // none , underline
+
+// * Тег <H>
+$font-size-h1:                 1.8em        !default;   // ~ 49px
+$font-size-h2:                 1.8em        !default;   // ~ 35px
+$font-size-h3:                 1.5em        !default;   // ~ 28px
+$font-size-h4:                 1.514em      !default;   // ~ 24px
+$font-size-h5:                 1.37em       !default;   // ~ 22px
+$font-size-h6:                 1em          !default;   // ~ 14px
+
+
+// * Массив статусов
+$status: (
+        '': (
+                #00c57c,
+                #00b06a,
+        ),
+        primary:    (
+                #3B7694,
+                #478db1,
+        ),
+        info:        (
+                #4b64ff,
+                #2CA8FF
+        ),
+        success:     (
+                #73d24a,
+                #0cbe63
+        ),
+        warning:     (
+                #f2d1ae,
+                #f96332
+        ),
+        danger:      (
+                #ff4b4b,
+                #f96332
+        ),
+);
+
+$color-default:                 nth(map-get($status, ''),1);
+$color-default-hover:           nth(map-get($status, ''),2);
+$color-primary:                 nth(map-get($status, primary),1);
+$color-primary-hover:           nth(map-get($status, primary),2);
+$color-info:                    nth(map-get($status, info),1);
+$color-info-hover:              nth(map-get($status, info),2);
+$color-success:                 nth(map-get($status, success),1);
+$color-success-hover:           nth(map-get($status, success),2);
+$color-warning:                 nth(map-get($status, warning),1);
+$color-warning-hover:           nth(map-get($status, warning),2);
+$color-danger:                  nth(map-get($status, danger),1);
+$color-danger-hover:            nth(map-get($status, danger),2);

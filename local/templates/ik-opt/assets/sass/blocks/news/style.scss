@@ -1,0 +1,120 @@
+.news {
+  &__detail {
+    &__wrap {}
+    &__title {
+      margin: 20px 0;
+    }
+    &__data {
+      margin-bottom: 5px;
+      font-size: 12px;
+      color: #888888;
+    }
+    &__img {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+      margin-top: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #FFFFFF;
+      background: #fff;
+      &__control {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: cover;
+        background-position: center;
+
+      }
+  }
+    &__text {
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+  }
+  &__list {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    @include media(md){
+      margin-bottom: 0;
+    }
+    @extend .row;
+    & .item {
+      position: relative;
+      @extend .col-12;
+      margin-bottom: 20px;
+      &__content {
+        &__img {
+          position: relative;
+          margin-bottom: 20px;
+          overflow: hidden;
+          @extend .row;
+          @extend .row-table;
+          height: 160px;
+          &__wrap {
+            @extend .col;
+          }
+          &__pic {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-size: cover;
+            background-position: center;
+            @extend .animated;
+            @extend .pulse;
+          }
+          &__btn {
+            @extend .animated;
+            @include transition();
+            @extend .fadeIn;
+            display: none;
+
+            &__click {
+              background: #000000;
+              border-color: #000000;
+            }
+            & .btn {
+              font-size: 12px;
+              letter-spacing: 0.7px;
+              margin-bottom: 6px;
+              vertical-align: middle;
+              height: auto;
+              padding-bottom: 2px;
+              font-family: $font-2;
+            }
+          }
+        }
+        &__title {
+          font-size: 19px;
+          font-weight: bold;
+        }
+        &__text {
+          font-size: 12px;
+        }
+        &__date {
+          position: absolute;
+          right: 12px;
+          top: 123px;
+          background: #f6f6f6;
+          padding: 1px 7px;
+          border-radius: 4px;
+          font-size: 12px;
+          color: #636363;
+        }
+        &__btn {
+          & a {
+            border-bottom: 1px dotted $app-color-1;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

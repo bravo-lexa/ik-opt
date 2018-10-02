@@ -1,0 +1,362 @@
+.header {
+  z-index: 99;
+  background: #fff;
+  &__top {
+    @extend .container-fluid;
+    position: relative;
+    font-family: $font-2;
+    background: #0f0f0f;
+    color: #fff;
+    @include media(lg){
+      text-align: center;
+    }
+    & a {
+      position: relative;
+      display: inline-block;
+      padding: 11px 15px;
+      font-size: 11px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: #fff;
+      @include hover {
+        & span {
+          border-bottom: 1px dotted $app-color-1;
+          color: $app-color-1;
+        }
+      }
+
+      &.is-user {
+        padding-left: 28px;
+        & svg {
+          position: absolute;
+          top: 9px;
+          left: 0;
+          display: inline-block;
+          width: 20px;
+          fill: #fff;
+        }
+      }
+      &.is-basket {
+        padding-left: 28px;
+        & svg {
+          position: absolute;
+          top: 9px;
+          left: 0;
+          display: inline-block;
+          width: 20px;
+          fill: #fff;
+        }
+      }
+    }
+
+    &__left {
+      float: left;
+      @include media(lg){
+        width: 100%;
+      }
+    }
+    &__right {
+      float: right;
+      @include media(lg){
+        width: 100%;
+      }
+      @include media(md){
+        text-align: right;
+      }
+    }
+    &__menu {
+      overflow: hidden;
+      & ul {
+        & li {
+          position: relative;
+          display: inline-block;
+          float: left;
+          @include after(){
+            position: absolute;
+            top: 17px;
+            right: -2px;
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: #2c2c2c;
+          }
+          &:last-child:after{
+            display: none;
+          }
+          @include media(lg){
+            float: none;
+          }
+        }
+      }
+    }
+    &__user {
+      a {
+
+      }
+    }
+  }
+
+  // Блоки
+  &__main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__logo {
+      width: 100%;
+      text-align: center;
+      & img {
+        max-height: 85px;
+      }
+      &__text {
+        text-align: center;
+        font-size: 10px;
+        letter-spacing: 0.8px;
+      }
+    }
+    &__time {
+      position: relative;
+      @include media(lg){
+        margin-bottom: 10px;
+        text-align: right;
+      }
+      @include media(sm){
+        display: none;
+      }
+      &__icon {
+        & svg {
+          width: 33px;
+          left: 0;
+          position: absolute;
+          fill: $app-color-1;
+        }
+      }
+      &__title {
+        font-size: 21px;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+      }
+      &__inf {
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+    }
+    &__phone {
+      position: relative;
+      text-align: right;
+      @include media(sm){
+        text-align: center;
+      }
+      &__icon {
+        @include media(md){
+          display: none;
+        }
+        & svg {
+          width: 33px;
+          height: 33px;
+          left: 0;
+          position: absolute;
+          fill: $app-color-1;
+        }
+        @include media(xl){
+          & svg {
+            left: 23px;
+          }
+        }
+      }
+      &__number {
+        font-size: 21px;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        & a {
+          color: #0f0f0f;
+          & b {
+            font-weight: normal;
+            font-size: 14px;
+            color: #797979;
+          }
+        }
+        @include media(xl){
+          font-size: 14px;
+          & a {
+            & b {
+              font-size: 11px;
+            }
+          }
+        }
+        @include media(md){
+          font-size: 18px;
+          & a {
+            & b {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      &__btn {
+        & a {
+          border-bottom: 1px dotted $app-color-1;
+        }
+      }
+    }
+    &__search {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+      &__control {
+        display: block;
+        width: 100%;
+        height: 40px;
+        border: 1px solid #dbdbdb;
+        background: none;
+        padding: 0 40px 0 20px;
+        color: #0f0f0f;
+        font-size: 13px;
+      }
+      &__btn {
+        position: absolute;
+        top: 9px;
+        right: 9px;
+        @extend .icon;
+        background: transparent;
+        border: 0;
+        & svg {
+          width: 20px;
+        }
+        &:hover {
+          cursor: pointer;
+          & svg {
+            fill: $app-color-1;
+          }
+        }
+      }
+    }
+    &__basket {
+      @include media(md){
+        text-align: right;
+      }
+      &__title {
+        margin-bottom: 8px;
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+      }
+      &__inf {
+        margin-bottom: 10px;
+        font-size: 12px;
+        & a {
+          border-bottom: 1px dotted $app-color-1;
+        }
+      }
+      &__btn {
+      }
+    }
+  }
+  &__menu {
+    @extend .row;
+    @extend .row-table;
+    &__full {
+      margin-top: 10px;
+      border-top: 1px solid #f7f7f7;
+    }
+    &>li {
+      @extend .col;
+      position: relative;
+      text-align: center;
+      &:hover ul {
+        display: block;
+      }
+      &>a {
+        display: inline-block;
+        padding: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #000;
+        @include hover {
+          color: $app-color-1;
+        }
+        @include media(lg){
+          padding: 8px;
+        }
+      }
+      &:nth-child(1){
+        .submenu_popup {
+          width: 1200px;
+
+          & .children{
+            float: left;
+            width: 19.333%;
+          }
+        }
+      }
+      &:nth-child(2){
+        .submenu_popup {
+          width: 960px;
+        }
+      }
+      & .submenu_popup {
+        @extend .animated;
+        @extend .fadeIn;
+        animation-duration: 0.4s;
+        z-index: 99;
+        position: absolute;
+        display: none;
+        background: #fff;
+        padding: 20px;
+        width: 750px;
+        overflow: hidden;
+        text-align: left;
+        //column-count: 3;
+        & .children{
+          float: left;
+          width: 33.333%;
+          vertical-align: top;
+          //&:nth-child(4n) {
+          //  clear: both;
+          //}
+         &>a {
+           position: relative;
+           display: block;
+           font-size: 20px;
+           font-weight: bold;
+           letter-spacing: 0.7px;
+
+         }
+          & ul {
+            margin-bottom: 10px;
+            padding-left: 12px;
+            & li {
+              & a {
+                display: inline-block;
+                position: relative;
+                margin: 2px 0;
+                color: #000000;
+                font-size: 13px;
+                border-bottom:  1px solid transparent;
+                @include before() {
+                  position: absolute;
+                  top: 7px;
+                  left: -11px;
+                  display: inline-block;
+                  width: 5px;
+                  height: 5px;
+                  background: #2c2c2c;
+                }
+                @include hover {
+                  border-bottom: 1px dotted $app-color-1;
+                  color: $app-color-1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .mob-btn {
+    display: none;
+    @include media(md){
+      display: block;
+    }
+  }
+}

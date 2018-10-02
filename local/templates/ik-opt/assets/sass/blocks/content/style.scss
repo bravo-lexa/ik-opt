@@ -1,0 +1,32 @@
+.content {
+  & table {
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+    font-size: 13px;
+    & td {
+      border-bottom: 1px solid #fbf7f7;
+    }
+    & b, strong {
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    &.is{
+      &-yellow {
+        background: #fff2cc;
+        border: 1px solid #f9e6ae;
+        & td {
+          border-bottom: 1px solid #f9e6ae;
+        }
+      }
+    }
+  }
+  & h2 {
+    margin-bottom: 20px;
+  }
+  & p {
+    margin-bottom: 10px;
+  }
+}
