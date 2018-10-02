@@ -2,9 +2,13 @@
   $form-border-radius: 5px;
   $form-border-color: #e0e2e6;
 
-  // * Параметры
+  /* is - Модификаторы */
   &.is {
-    // * Положительный
+    /*
+      * is-success
+      * Если форма вернуда положительный ответ,
+      * то показывается этот блок
+    */
     &-success {
       & .form-wrap {
         display: none;
@@ -12,10 +16,14 @@
       }
       & .form-success {
         display: block;
+        @at-root .form-success {
+          display: none;
+        }
       }
     }
   }
 
+  /* group - Нужен для создания общей зоны одного input поля */
   &-group {
     position: relative;
     display: table;
@@ -45,7 +53,7 @@
       & a {
         color: $app-color-1;
         border-bottom: 1px dotted $app-color-1;
-    }
+      }
     }
     &-text-mini {
       font-size: 11px;
@@ -59,20 +67,29 @@
       letter-spacing: 0.3px;
       margin-bottom: 5px;
     }
-    // * * *
+
+    /* is - Модификаторы */
     &.is {
       background: #000000;
-      // * В одну линию
-      $line-title-weight : 33%;
-      $line-margin-weight : 2.5%;
+      $line-title-weight: 33%;
+      $line-margin-weight: 2.5%;
+
+      /*
+        * .is-in-line
+        * .is-in-line-2 - два поля, в одной строке
+        * .is-in-line-3 - три поля, в одной строке
+        * В одну линию, такой параметр хорош когда нужно
+        * сделать настройки или расширенный набор ввода
+      */
       &-in-line {
+        // * Вренший вид
         & .form-group-title {
           display: inline-block;
           width: $line-title-weight;
-          @include media(lg){
+          @include media(lg) {
             width: 135px;
           }
-          @include media(sm){
+          @include media(sm) {
             display: block;
             width: 100%;
           }
@@ -81,18 +98,19 @@
         & .form-select {
           display: inline-block;
           width: 100% - $line-title-weight;
-          @include media(sm){
+          @include media(sm) {
             display: block;
-            width: 100%!important;
+            width: 100% !important;
           }
-          &:nth-child(2n+1){
+          &:nth-child(2n+1) {
             margin-left: $line-margin-weight;
-            @include media(sm){
+            @include media(sm) {
               margin-left: 0;
               margin-top: 10px;
             }
           }
         }
+
         &-2 {
           & .form-input,
           & .form-select {
@@ -106,15 +124,34 @@
           }
         }
       }
+
+      /*
+       * .is-offset
+       * Отступ снизу группы
+      */
+      &-offset {
+        margin-bottom: 15px;
+        @include media(md){
+          margin-bottom: 5px;
+        }
+      }
+
+      /*
+       * .is-error
+       * Ошибка
+      */
       &-error {
         & .form-input-control {
-          background: #f3e8e8!important;
-          color: red!important;
+          background: #f3e8e8 !important;
+          color: red !important;
         }
       }
     }
   }
-  // * INPUT
+
+
+
+  /* form-input - Текстовое поле */
   &-input {
     position: relative;
     vertical-align: top;
@@ -143,15 +180,14 @@
 
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) inset;
 
-
       -webkit-appearance: none !important;
       -moz-appearance: none !important;
       appearance: none !important;
 
       // * Анимации
-      @include transition( 0.3 , ease-in-out );
+      @include transition(0.3, ease-in-out);
 
-      &:focus{
+      &:focus {
         color: #495057;
         border-color: #80bdff;
         box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -165,7 +201,6 @@
         color: #a9a3aa;
       }
 
-
       // * Поле code
       &[name=bot] {
         display: none;
@@ -178,19 +213,19 @@
         border: 1px solid transparent;
         border-radius: 0;
         &::placeholder {
-          color:    #0087ff;
+          color: #0087ff;
         }
       }
 
       // * Параметры
-      &.is{
+      &.is {
         &-big {
           height: 46px;
           font-size: 16px;
         }
         &-error {
           border-color: red !important;
-          box-shadow: 0 0 8px 1px #ff00005e!important;
+          box-shadow: 0 0 8px 1px #ff00005e !important;
         }
       }
     }
@@ -228,43 +263,43 @@
     }
   }
   &-checkbox {
-    position:relative;
+    position: relative;
     &-name {
-      float:right;
+      float: right;
     }
     &-control {
       display: none;
-      &[type=checkbox]:checked + label{
-        background:#22c380;
+      &[type=checkbox]:checked + label {
+        background: #22c380;
       }
-      &[type=checkbox]:checked + label:before{
-        left:20px;
+      &[type=checkbox]:checked + label:before {
+        left: 20px;
         background: #ffffff;
       }
     }
     &-label {
-      width:40px;
-      height:24px;
-      box-sizing:border-box;
-      float:left;
-      border-radius:100px;
-      position:relative;
-      cursor:pointer;
-      transition:.3s ease;
+      width: 40px;
+      height: 24px;
+      box-sizing: border-box;
+      float: left;
+      border-radius: 100px;
+      position: relative;
+      cursor: pointer;
+      transition: .3s ease;
       background-color: #e0e2e6;
 
-      &:before{
-        transition:.3s ease;
-        content:'';
+      &:before {
+        transition: .3s ease;
+        content: '';
         left: 3px;
         top: 4px;
         width: 16px;
         height: 16px;
-        position:absolute;
+        position: absolute;
         background: #a4a6aa;
-        box-sizing:border-box;
-        color:black;
-        border-radius:100px;
+        box-sizing: border-box;
+        color: black;
+        border-radius: 100px;
       }
     }
   }
@@ -298,8 +333,10 @@
       font-size: 13px;
       letter-spacing: 0.2px;
 
-      @include before(){}
-      @include after(){}
+      @include before() {
+      }
+      @include after() {
+      }
       &:before,
       &:after {
         position: absolute;
@@ -332,15 +369,15 @@
     border-radius: 4px;
     @extend .icon;
     @extend .icon-arrow-sorted-down;
-    @include before(){
-      position: absolute!important;
-      right: 15px!important;
-      top: 6px!important;
-      font-size: 20px!important;
+    @include before() {
+      position: absolute !important;
+      right: 15px !important;
+      top: 6px !important;
+      font-size: 20px !important;
       z-index: 3;
       color: #caccd2;
     }
-    @include after(){
+    @include after() {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -404,7 +441,6 @@
       border-radius: 9px;
       text-align: center;
 
-
       background-size: cover;
       background-position: center;
       & img {
@@ -424,24 +460,24 @@
           border-color: #ff999f;
           box-shadow: 0 0 0 0.2rem rgba(255, 0, 8, 0.25);
           @extend .icon;
-        //  @extend .icon_times;
+          //  @extend .icon_times;
           &:before {
             @extend .pulse;
             opacity: 0.8;
           }
-          & .is-delete-control{
+          & .is-delete-control {
             opacity: 1;
             color: #fff;
             border-color: #f14848;
             background-color: #f14848;
           }
         }
-        @include before(){
+        @include before() {
           @include transition();
           @extend .animated;
           @extend .infinite;
           z-index: 2;
-          font-size: 32px!important;
+          font-size: 32px !important;
           color: #ff444e;
           opacity: 0.4;
         }

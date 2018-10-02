@@ -98,8 +98,10 @@
           top: 77px;
           left: 100%;
           & svg {
-            width: 80px;
-            fill:#a5a1a1;
+            width: 72px;
+            fill: #35a1f7;
+            box-shadow: 0 0 21px #d2c9c9;
+            border-radius: 3px;
           }
         }
       }

@@ -6468,89 +6468,100 @@ iframe {
     color: #FFF;
     border: 2px solid #2662de; }
 
-.form.is-success .form-wrap {
-  display: none; }
-
-.form.is-success .form-success {
-  display: block; }
-
-.form-group {
-  position: relative;
-  display: table;
-  width: 100%; }
-  .form-group-title {
-    display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    vertical-align: top;
-    font-size: 15px;
-    letter-spacing: 0.3px; }
-    .form-group-title i {
-      display: inline-block;
-      margin-left: 5px;
-      color: red;
-      font-weight: normal;
-      font-style: normal; }
-  .form-group-text {
-    font-size: 14px; }
-    .form-group-text a {
-      color: #418ee6;
-      border-bottom: 1px dotted #418ee6; }
-  .form-group-text-mini {
-    font-size: 11px;
-    font-weight: 100;
-    letter-spacing: 0.3px;
-    color: #949494; }
-  .form-group-description {
-    color: #686a6e;
-    font-size: 12px;
-    letter-spacing: 0.3px;
-    margin-bottom: 5px; }
-  .form-group.is {
-    background: #000000; }
-    .form-group.is-in-line .form-group-title {
-      display: inline-block;
-      width: 33%;
+.form {
+  /* is - Модификаторы */
+  /* group - Нужен для создания общей зоны одного input поля */
+  /* form-input - Текстовое поле */ }
+  .form.is {
+    /*
+      * is-success
+      * Если форма вернуда положительный ответ,
+      * то показывается этот блок
+    */ }
+    .form.is-success .form-wrap {
+      display: none; }
+    .form.is-success .form-success {
+      display: block; }
+      .form-success {
+        display: none; }
+  .form-group {
+    position: relative;
+    display: table;
+    width: 100%;
+    /* is - Модификаторы */ }
+    .form-group-title {
+      display: block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      vertical-align: top;
+      font-size: 15px;
+      letter-spacing: 0.3px; }
+      .form-group-title i {
+        display: inline-block;
+        margin-left: 5px;
+        color: red;
+        font-weight: normal;
+        font-style: normal; }
+    .form-group-text {
+      font-size: 14px; }
+      .form-group-text a {
+        color: #418ee6;
+        border-bottom: 1px dotted #418ee6; }
+    .form-group-text-mini {
+      font-size: 11px;
+      font-weight: 100;
+      letter-spacing: 0.3px;
+      color: #949494; }
+    .form-group-description {
+      color: #686a6e;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      margin-bottom: 5px; }
+    .form-group.is {
+      background: #000000;
       /*
+        * .is-in-line
+        * .is-in-line-2 - два поля, в одной строке
+        * .is-in-line-3 - три поля, в одной строке
+        * В одну линию, такой параметр хорош когда нужно
+        * сделать настройки или расширенный набор ввода
+      */
+      /*
+       * .is-offset
+       * Отступ снизу группы
+      */
+      /*
+       * .is-error
+       * Ошибка
+      */ }
+      .form-group.is-in-line .form-group-title {
+        display: inline-block;
+        width: 33%;
+        /*
     xl: 1200px Комп
     lg: 992px  Ноут
     md: 758px  Планшет
     sm: 576px  Мобилки перевернутые
     xs: 360px  Мобилки
   */
-      /*
+        /*
     xl: 1200px Комп
     lg: 992px  Ноут
     md: 758px  Планшет
     sm: 576px  Мобилки перевернутые
     xs: 360px  Мобилки
   */ }
-      @media only screen and (max-width: 991px) {
-        .form-group.is-in-line .form-group-title {
-          width: 135px; } }
-      @media only screen and (max-width: 575px) {
-        .form-group.is-in-line .form-group-title {
-          display: block;
-          width: 100%; } }
-    .form-group.is-in-line .form-input,
-    .form-group.is-in-line .form-select {
-      display: inline-block;
-      width: 67%;
-      /*
-    xl: 1200px Комп
-    lg: 992px  Ноут
-    md: 758px  Планшет
-    sm: 576px  Мобилки перевернутые
-    xs: 360px  Мобилки
-  */ }
-      @media only screen and (max-width: 575px) {
-        .form-group.is-in-line .form-input,
-        .form-group.is-in-line .form-select {
-          display: block;
-          width: 100% !important; } }
-      .form-group.is-in-line .form-input:nth-child(2n+1),
-      .form-group.is-in-line .form-select:nth-child(2n+1) {
-        margin-left: 2.5%;
+        @media only screen and (max-width: 991px) {
+          .form-group.is-in-line .form-group-title {
+            width: 135px; } }
+        @media only screen and (max-width: 575px) {
+          .form-group.is-in-line .form-group-title {
+            display: block;
+            width: 100%; } }
+      .form-group.is-in-line .form-input,
+      .form-group.is-in-line .form-select {
+        display: inline-block;
+        width: 67%;
         /*
     xl: 1200px Комп
     lg: 992px  Ноут
@@ -6559,44 +6570,70 @@ iframe {
     xs: 360px  Мобилки
   */ }
         @media only screen and (max-width: 575px) {
-          .form-group.is-in-line .form-input:nth-child(2n+1),
-          .form-group.is-in-line .form-select:nth-child(2n+1) {
-            margin-left: 0;
-            margin-top: 10px; } }
-    .form-group.is-in-line-2 .form-input,
-    .form-group.is-in-line-2 .form-select {
-      width: 32.25%; }
-    .form-group.is-in-line-3 .form-input,
-    .form-group.is-in-line-3 .form-select {
-      width: 100px; }
-    .form-group.is-error .form-input-control, .form-group.is-error .form-textarea-control, .form-group.is-error .form-select-control {
-      background: #f3e8e8 !important;
-      color: red !important; }
-
-.form-input {
-  position: relative;
-  vertical-align: top; }
-  .form-input-control, .form-textarea-control, .form-select-control {
+          .form-group.is-in-line .form-input,
+          .form-group.is-in-line .form-select {
+            display: block;
+            width: 100% !important; } }
+        .form-group.is-in-line .form-input:nth-child(2n+1),
+        .form-group.is-in-line .form-select:nth-child(2n+1) {
+          margin-left: 2.5%;
+          /*
+    xl: 1200px Комп
+    lg: 992px  Ноут
+    md: 758px  Планшет
+    sm: 576px  Мобилки перевернутые
+    xs: 360px  Мобилки
+  */ }
+          @media only screen and (max-width: 575px) {
+            .form-group.is-in-line .form-input:nth-child(2n+1),
+            .form-group.is-in-line .form-select:nth-child(2n+1) {
+              margin-left: 0;
+              margin-top: 10px; } }
+      .form-group.is-in-line-2 .form-input,
+      .form-group.is-in-line-2 .form-select {
+        width: 32.25%; }
+      .form-group.is-in-line-3 .form-input,
+      .form-group.is-in-line-3 .form-select {
+        width: 100px; }
+      .form-group.is-offset {
+        margin-bottom: 15px;
+        /*
+    xl: 1200px Комп
+    lg: 992px  Ноут
+    md: 758px  Планшет
+    sm: 576px  Мобилки перевернутые
+    xs: 360px  Мобилки
+  */ }
+        @media only screen and (max-width: 767px) {
+          .form-group.is-offset {
+            margin-bottom: 5px; } }
+      .form-group.is-error .form-input-control, .form-group.is-error .form-textarea-control, .form-group.is-error .form-select-control {
+        background: #f3e8e8 !important;
+        color: red !important; }
+  .form-input {
     position: relative;
-    width: 100%;
-    display: block;
-    padding: 8px 15px 8px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.6px;
-    background-clip: padding-box;
-    background: #e9eff3;
-    color: #30424e;
-    border-top: 1px solid #a1a5a8a8;
-    border-left: 1px solid #cfd5d8;
-    border-right: 1px solid #cfd5d8;
-    border-bottom: 1px solid #dedede;
-    border-radius: 3px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) inset;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-    /*
+    vertical-align: top; }
+    .form-input-control, .form-textarea-control, .form-select-control {
+      position: relative;
+      width: 100%;
+      display: block;
+      padding: 8px 15px 8px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.6px;
+      background-clip: padding-box;
+      background: #e9eff3;
+      color: #30424e;
+      border-top: 1px solid #a1a5a8a8;
+      border-left: 1px solid #cfd5d8;
+      border-right: 1px solid #cfd5d8;
+      border-bottom: 1px solid #dedede;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) inset;
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+      /*
     Значения $speed:
     ease 	Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует cubic-bezier(0.25,0.1,0.25,1).
     linear 	Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует cubic-bezier(0,0,1,1).
@@ -6607,45 +6644,45 @@ iframe {
     initial 	Устанавливает значение свойства в значение по умолчанию.
     inherit 	Наследует значение свойства от родительского элемента.
   */
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .form-input-control:focus, .form-textarea-control:focus, .form-select-control:focus {
-      color: #495057;
-      border-color: #80bdff;
-      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-      outline: 0; }
-    .form-input-control::-ms-expand, .form-textarea-control::-ms-expand, .form-select-control::-ms-expand {
-      background-color: transparent;
-      border: 0; }
-    .form-input-control::-webkit-input-placeholder, .form-textarea-control::-webkit-input-placeholder, .form-select-control::-webkit-input-placeholder {
-      color: #a9a3aa; }
-    .form-input-control:-ms-input-placeholder, .form-textarea-control:-ms-input-placeholder, .form-select-control:-ms-input-placeholder {
-      color: #a9a3aa; }
-    .form-input-control::-ms-input-placeholder, .form-textarea-control::-ms-input-placeholder, .form-select-control::-ms-input-placeholder {
-      color: #a9a3aa; }
-    .form-input-control::placeholder, .form-textarea-control::placeholder, .form-select-control::placeholder {
-      color: #a9a3aa; }
-    .form-input-control[name=bot], .form-textarea-control[name=bot], .form-select-control[name=bot] {
-      display: none; }
-    .form-input-control[name=code], .form-textarea-control[name=code], .form-select-control[name=code] {
-      padding: 8px 12px;
-      font-family: monospace;
-      color: #0087ff;
-      font-weight: bold;
-      border: 1px solid transparent;
-      border-radius: 0; }
-      .form-input-control[name=code]::placeholder, .form-textarea-control[name=code]::placeholder, .form-select-control[name=code]::placeholder {
-        color: #0087ff; }
-    .form-input-control.is-big, .is-big.form-textarea-control, .is-big.form-select-control {
-      height: 46px;
-      font-size: 16px; }
-    .form-input-control.is-error, .is-error.form-textarea-control, .is-error.form-select-control {
-      border-color: red !important;
-      box-shadow: 0 0 8px 1px #ff00005e !important; }
-  .form-input-error {
-    /*
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .form-input-control:focus, .form-textarea-control:focus, .form-select-control:focus {
+        color: #495057;
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        outline: 0; }
+      .form-input-control::-ms-expand, .form-textarea-control::-ms-expand, .form-select-control::-ms-expand {
+        background-color: transparent;
+        border: 0; }
+      .form-input-control::-webkit-input-placeholder, .form-textarea-control::-webkit-input-placeholder, .form-select-control::-webkit-input-placeholder {
+        color: #a9a3aa; }
+      .form-input-control:-ms-input-placeholder, .form-textarea-control:-ms-input-placeholder, .form-select-control:-ms-input-placeholder {
+        color: #a9a3aa; }
+      .form-input-control::-ms-input-placeholder, .form-textarea-control::-ms-input-placeholder, .form-select-control::-ms-input-placeholder {
+        color: #a9a3aa; }
+      .form-input-control::placeholder, .form-textarea-control::placeholder, .form-select-control::placeholder {
+        color: #a9a3aa; }
+      .form-input-control[name=bot], .form-textarea-control[name=bot], .form-select-control[name=bot] {
+        display: none; }
+      .form-input-control[name=code], .form-textarea-control[name=code], .form-select-control[name=code] {
+        padding: 8px 12px;
+        font-family: monospace;
+        color: #0087ff;
+        font-weight: bold;
+        border: 1px solid transparent;
+        border-radius: 0; }
+        .form-input-control[name=code]::placeholder, .form-textarea-control[name=code]::placeholder, .form-select-control[name=code]::placeholder {
+          color: #0087ff; }
+      .form-input-control.is-big, .is-big.form-textarea-control, .is-big.form-select-control {
+        height: 46px;
+        font-size: 16px; }
+      .form-input-control.is-error, .is-error.form-textarea-control, .is-error.form-select-control {
+        border-color: red !important;
+        box-shadow: 0 0 8px 1px #ff00005e !important; }
+    .form-input-error {
+      /*
     Значения $speed:
     ease 	Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует cubic-bezier(0.25,0.1,0.25,1).
     linear 	Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует cubic-bezier(0,0,1,1).
@@ -6656,289 +6693,201 @@ iframe {
     initial 	Устанавливает значение свойства в значение по умолчанию.
     inherit 	Наследует значение свойства от родительского элемента.
   */
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    font-size: 9px;
-    letter-spacing: 0.5px;
-    color: red;
-    border-radius: 4px;
-    position: absolute;
-    top: 28px;
-    left: 17px;
-    padding: 0;
-    text-align: left;
-    font-weight: bold; }
-  .form-input-icon {
-    position: absolute;
-    right: 0;
-    top: 0; }
-
-.form-textarea-control {
-  padding: 16px 15px;
-  min-height: 120px;
-  line-height: 1.4em; }
-
-.form-checkbox {
-  position: relative; }
-  .form-checkbox-name {
-    float: right; }
-  .form-checkbox-control {
-    display: none; }
-    .form-checkbox-control[type=checkbox]:checked + label {
-      background: #22c380; }
-    .form-checkbox-control[type=checkbox]:checked + label:before {
-      left: 20px;
-      background: #ffffff; }
-  .form-checkbox-label {
-    width: 40px;
-    height: 24px;
-    box-sizing: border-box;
-    float: left;
-    border-radius: 100px;
-    position: relative;
-    cursor: pointer;
-    transition: .3s ease;
-    background-color: #e0e2e6; }
-    .form-checkbox-label:before {
-      transition: .3s ease;
-      content: '';
-      left: 3px;
-      top: 4px;
-      width: 16px;
-      height: 16px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      font-size: 9px;
+      letter-spacing: 0.5px;
+      color: red;
+      border-radius: 4px;
       position: absolute;
-      background: #a4a6aa;
+      top: 28px;
+      left: 17px;
+      padding: 0;
+      text-align: left;
+      font-weight: bold; }
+    .form-input-icon {
+      position: absolute;
+      right: 0;
+      top: 0; }
+  .form-textarea-control {
+    padding: 16px 15px;
+    min-height: 120px;
+    line-height: 1.4em; }
+  .form-checkbox {
+    position: relative; }
+    .form-checkbox-name {
+      float: right; }
+    .form-checkbox-control {
+      display: none; }
+      .form-checkbox-control[type=checkbox]:checked + label {
+        background: #22c380; }
+      .form-checkbox-control[type=checkbox]:checked + label:before {
+        left: 20px;
+        background: #ffffff; }
+    .form-checkbox-label {
+      width: 40px;
+      height: 24px;
       box-sizing: border-box;
-      color: black;
-      border-radius: 100px; }
-
-.form-radio {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  padding-right: 10px; }
-  .form-radio-control {
-    opacity: 0;
-    -webkit-appearance: none;
+      float: left;
+      border-radius: 100px;
+      position: relative;
+      cursor: pointer;
+      transition: .3s ease;
+      background-color: #e0e2e6; }
+      .form-checkbox-label:before {
+        transition: .3s ease;
+        content: '';
+        left: 3px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        background: #a4a6aa;
+        box-sizing: border-box;
+        color: black;
+        border-radius: 100px; }
+  .form-radio {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
-    z-index: 100;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 30px;
-    position: absolute;
-    left: 0;
-    top: calc(50% - 15px);
-    cursor: pointer; }
-    .form-radio-control:checked + label:after {
-      background-color: #0269de;
-      box-shadow: inset 0 0 0 4px #0269de; }
-  .form-radio label {
-    position: relative;
-    padding-left: 30px;
-    font-size: 13px;
-    letter-spacing: 0.2px; }
-    .form-radio label:before {
-      content: '';
-      display: block; }
-    .form-radio label:after {
-      content: '';
-      display: block; }
-    .form-radio label:before, .form-radio label:after {
-      position: absolute;
-      top: -1px;
-      left: 0;
-      border-radius: 100%;
-      border: 1px solid #afb3b7;
-      background: #fff;
+    padding-right: 10px; }
+    .form-radio-control {
+      opacity: 0;
+      -webkit-appearance: none;
       display: inline-block;
-      width: 18px;
-      height: 18px;
-      vertical-align: top;
-      cursor: pointer;
-      text-align: center;
-      transition: all 250ms ease; }
-    .form-radio label:after {
-      top: 3px;
-      left: 4px;
-      width: 10px;
-      height: 10px;
-      border: 0; }
-
-.form-select {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  border-radius: 4px; }
-  .form-select:before {
-    content: '';
-    display: block;
-    position: absolute !important;
-    right: 15px !important;
-    top: 6px !important;
-    font-size: 20px !important;
-    z-index: 3;
-    color: #caccd2; }
-  .form-select:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    background: #fff;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-  .form-select-control {
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    margin: 0 0;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: normal;
-    color: #2c2c2c;
-    padding: 10px 42px 10px 14px;
+      vertical-align: middle;
+      z-index: 100;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 15px);
+      cursor: pointer; }
+      .form-radio-control:checked + label:after {
+        background-color: #0269de;
+        box-shadow: inset 0 0 0 4px #0269de; }
+    .form-radio label {
+      position: relative;
+      padding-left: 30px;
+      font-size: 13px;
+      letter-spacing: 0.2px; }
+      .form-radio label:before {
+        content: '';
+        display: block; }
+      .form-radio label:after {
+        content: '';
+        display: block; }
+      .form-radio label:before, .form-radio label:after {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        border-radius: 100%;
+        border: 1px solid #afb3b7;
+        background: #fff;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        vertical-align: top;
+        cursor: pointer;
+        text-align: center;
+        transition: all 250ms ease; }
+      .form-radio label:after {
+        top: 3px;
+        left: 4px;
+        width: 10px;
+        height: 10px;
+        border: 0; }
+  .form-select {
     position: relative;
     z-index: 1;
-    appearance: none !important;
-    cursor: pointer; }
-    .form-select-control.is-status-0 {
-      color: red; }
-    .form-select-control.is-status-1 {
-      color: #00c57c; }
-    .form-select-control.is-status-2 {
-      color: #e8e8e8; }
-    .form-select-control.is-status-3 {
-      color: #00c57c; }
-    .form-select-control[name='status'] {
-      font-size: 13px;
-      padding: 10px 30px 8px 14px; }
-
-.form-file-img {
-  position: relative;
-  display: block;
-  max-width: 250px;
-  max-height: 250px;
-  min-width: 250px;
-  min-height: 125px;
-  margin-right: 20px;
-  padding: 16px 16px 4px;
-  border: 2px dashed #e0e2e6;
-  border-radius: 9px;
-  text-align: center;
-  background-size: cover;
-  background-position: center; }
-  .form-file-img img {
-    max-width: 300px;
-    max-height: 300px; }
-  .form-file-img.is-mini {
-    height: 50px; }
-  .form-file-img.is-delete {
-    cursor: pointer; }
-    .form-file-img.is-delete:hover, .form-file-img.is-delete:focus {
-      cursor: pointer;
-      border-color: #ff999f;
-      box-shadow: 0 0 0 0.2rem rgba(255, 0, 8, 0.25); }
-      .form-file-img.is-delete:hover:before, .form-file-img.is-delete:focus:before {
-        opacity: 0.8; }
-      .form-file-img.is-delete:hover .is-delete-control, .form-file-img.is-delete:focus .is-delete-control {
-        opacity: 1;
-        color: #fff;
-        border-color: #f14848;
-        background-color: #f14848; }
-    .form-file-img.is-delete:before {
+    overflow: hidden;
+    border-radius: 4px; }
+    .form-select:before {
       content: '';
       display: block;
-      /*
-    Значения $speed:
-    ease 	Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует cubic-bezier(0.25,0.1,0.25,1).
-    linear 	Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует cubic-bezier(0,0,1,1).
-    ease-in 	Переход начинается медленно, а затем плавно ускоряется в конце. Соответствует cubic-bezier(0.42,0,1,1).
-    ease-out 	Переход начинается быстро и плавно замедляется в конце. Соответствует cubic-bezier(0,0,0.58,1).
-    ease-in-out 	Переход медленно начинается и медленно заканчивается. Соответствует cubic-bezier(0.42,0,0.58,1).
-    cubic-bezier(x1, y1, x2, y2) 	Позволяет вручную установить значения от 0 до 1 для кривой ускорения. На этом сайте вы сможете построить любую траекторию перехода.
-    initial 	Устанавливает значение свойства в значение по умолчанию.
-    inherit 	Наследует значение свойства от родительского элемента.
-  */
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      z-index: 2;
-      font-size: 32px !important;
-      color: #ff444e;
-      opacity: 0.4; }
-    .form-file-img.is-delete .is-delete-control {
-      /*
-    Значения $speed:
-    ease 	Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует cubic-bezier(0.25,0.1,0.25,1).
-    linear 	Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует cubic-bezier(0,0,1,1).
-    ease-in 	Переход начинается медленно, а затем плавно ускоряется в конце. Соответствует cubic-bezier(0.42,0,1,1).
-    ease-out 	Переход начинается быстро и плавно замедляется в конце. Соответствует cubic-bezier(0,0,0.58,1).
-    ease-in-out 	Переход медленно начинается и медленно заканчивается. Соответствует cubic-bezier(0.42,0,0.58,1).
-    cubic-bezier(x1, y1, x2, y2) 	Позволяет вручную установить значения от 0 до 1 для кривой ускорения. На этом сайте вы сможете построить любую траекторию перехода.
-    initial 	Устанавливает значение свойства в значение по умолчанию.
-    inherit 	Наследует значение свойства от родительского элемента.
-  */
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
+      position: absolute !important;
+      right: 15px !important;
+      top: 6px !important;
+      font-size: 20px !important;
+      z-index: 3;
+      color: #caccd2; }
+    .form-select:after {
+      content: '';
       display: block;
-      width: 40%;
-      margin: 26px auto 0;
-      padding: 3px 0;
-      border-radius: 4px;
-      font-size: 12px;
-      letter-spacing: 1px;
-      font-weight: bold;
-      text-transform: uppercase;
-      opacity: 0; }
-  .form-file-img.is-upload {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 35px; }
-    .form-file-img.is-upload .is-delete-control {
-      display: none; }
-
-.form-file-control {
-  margin-top: 5px;
-  margin-bottom: 15px; }
-
-.form-code-control {
-  padding: 2px 5px;
-  font-family: monospace;
-  font-size: 13px;
-  color: #0000FF;
-  text-align: center;
-  direction: ltr;
-  background: #F0F0F0;
-  border-radius: 4px;
-  border: 1px inset #d2d2d2; }
-
-.form-count {
-  display: inline-block;
-  max-width: 90px;
-  margin: 5px;
-  position: relative; }
-  .form-count:hover .form-count-control, .form-count:focus .form-count-control {
-    opacity: 1; }
-  .form-count-input {
-    width: 100%;
-    padding: 11px 5px;
-    border: 1px solid #eaeaea;
-    background: transparent;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      background: #fff;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    .form-select-control {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      margin: 0 0;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      color: #2c2c2c;
+      padding: 10px 42px 10px 14px;
+      position: relative;
+      z-index: 1;
+      appearance: none !important;
+      cursor: pointer; }
+      .form-select-control.is-status-0 {
+        color: red; }
+      .form-select-control.is-status-1 {
+        color: #00c57c; }
+      .form-select-control.is-status-2 {
+        color: #e8e8e8; }
+      .form-select-control.is-status-3 {
+        color: #00c57c; }
+      .form-select-control[name='status'] {
+        font-size: 13px;
+        padding: 10px 30px 8px 14px; }
+  .form-file-img {
+    position: relative;
+    display: block;
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 250px;
+    min-height: 125px;
+    margin-right: 20px;
+    padding: 16px 16px 4px;
+    border: 2px dashed #e0e2e6;
+    border-radius: 9px;
     text-align: center;
-    font-size: 11px;
-    border-radius: 8px; }
-  .form-count-control {
-    /*
+    background-size: cover;
+    background-position: center; }
+    .form-file-img img {
+      max-width: 300px;
+      max-height: 300px; }
+    .form-file-img.is-mini {
+      height: 50px; }
+    .form-file-img.is-delete {
+      cursor: pointer; }
+      .form-file-img.is-delete:hover, .form-file-img.is-delete:focus {
+        cursor: pointer;
+        border-color: #ff999f;
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 8, 0.25); }
+        .form-file-img.is-delete:hover:before, .form-file-img.is-delete:focus:before {
+          opacity: 0.8; }
+        .form-file-img.is-delete:hover .is-delete-control, .form-file-img.is-delete:focus .is-delete-control {
+          opacity: 1;
+          color: #fff;
+          border-color: #f14848;
+          background-color: #f14848; }
+      .form-file-img.is-delete:before {
+        content: '';
+        display: block;
+        /*
     Значения $speed:
     ease 	Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует cubic-bezier(0.25,0.1,0.25,1).
     linear 	Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует cubic-bezier(0,0,1,1).
@@ -6949,53 +6898,131 @@ iframe {
     initial 	Устанавливает значение свойства в значение по умолчанию.
     inherit 	Наследует значение свойства от родительского элемента.
   */
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    opacity: 0; }
-    .form-count-control button {
-      position: absolute;
-      border-radius: 3px;
-      height: 16px;
-      width: 18px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        z-index: 2;
+        font-size: 32px !important;
+        color: #ff444e;
+        opacity: 0.4; }
+      .form-file-img.is-delete .is-delete-control {
+        /*
+    Значения $speed:
+    ease 	Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует cubic-bezier(0.25,0.1,0.25,1).
+    linear 	Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует cubic-bezier(0,0,1,1).
+    ease-in 	Переход начинается медленно, а затем плавно ускоряется в конце. Соответствует cubic-bezier(0.42,0,1,1).
+    ease-out 	Переход начинается быстро и плавно замедляется в конце. Соответствует cubic-bezier(0,0,0.58,1).
+    ease-in-out 	Переход медленно начинается и медленно заканчивается. Соответствует cubic-bezier(0.42,0,0.58,1).
+    cubic-bezier(x1, y1, x2, y2) 	Позволяет вручную установить значения от 0 до 1 для кривой ускорения. На этом сайте вы сможете построить любую траекторию перехода.
+    initial 	Устанавливает значение свойства в значение по умолчанию.
+    inherit 	Наследует значение свойства от родительского элемента.
+  */
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        display: block;
+        width: 40%;
+        margin: 26px auto 0;
+        padding: 3px 0;
+        border-radius: 4px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-transform: uppercase;
+        opacity: 0; }
+    .form-file-img.is-upload {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 35px; }
+      .form-file-img.is-upload .is-delete-control {
+        display: none; }
+  .form-file-control {
+    margin-top: 5px;
+    margin-bottom: 15px; }
+  .form-code-control {
+    padding: 2px 5px;
+    font-family: monospace;
+    font-size: 13px;
+    color: #0000FF;
+    text-align: center;
+    direction: ltr;
+    background: #F0F0F0;
+    border-radius: 4px;
+    border: 1px inset #d2d2d2; }
+  .form-count {
+    display: inline-block;
+    max-width: 90px;
+    margin: 5px;
+    position: relative; }
+    .form-count:hover .form-count-control, .form-count:focus .form-count-control {
+      opacity: 1; }
+    .form-count-input {
+      width: 100%;
+      padding: 11px 5px;
+      border: 1px solid #eaeaea;
+      background: transparent;
       text-align: center;
-      padding: 1px;
-      z-index: 1;
-      bottom: -6px;
-      left: 50%;
-      background: #489af7;
-      color: #fff;
-      border: 0; }
-      .form-count-control button[data-btn=up] {
-        margin-left: 2px; }
-      .form-count-control button[data-btn=down] {
-        margin-left: -18px; }
-      .form-count-control button:hover, .form-count-control button:focus {
-        cursor: pointer;
-        background: #2662de; }
-  .form-count-text {
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    margin-top: -0.9em;
-    padding-left: 10px; }
-
-.form-title {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  font-family: "Open Sans", cursive;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 22px;
-  color: #4A4A4A;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  border-bottom: 1px solid #efefef;
-  text-align: left; }
-
-.form hr {
-  margin-bottom: 20px; }
+      font-size: 11px;
+      border-radius: 8px; }
+    .form-count-control {
+      /*
+    Значения $speed:
+    ease 	Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует cubic-bezier(0.25,0.1,0.25,1).
+    linear 	Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует cubic-bezier(0,0,1,1).
+    ease-in 	Переход начинается медленно, а затем плавно ускоряется в конце. Соответствует cubic-bezier(0.42,0,1,1).
+    ease-out 	Переход начинается быстро и плавно замедляется в конце. Соответствует cubic-bezier(0,0,0.58,1).
+    ease-in-out 	Переход медленно начинается и медленно заканчивается. Соответствует cubic-bezier(0.42,0,0.58,1).
+    cubic-bezier(x1, y1, x2, y2) 	Позволяет вручную установить значения от 0 до 1 для кривой ускорения. На этом сайте вы сможете построить любую траекторию перехода.
+    initial 	Устанавливает значение свойства в значение по умолчанию.
+    inherit 	Наследует значение свойства от родительского элемента.
+  */
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      opacity: 0; }
+      .form-count-control button {
+        position: absolute;
+        border-radius: 3px;
+        height: 16px;
+        width: 18px;
+        text-align: center;
+        padding: 1px;
+        z-index: 1;
+        bottom: -6px;
+        left: 50%;
+        background: #489af7;
+        color: #fff;
+        border: 0; }
+        .form-count-control button[data-btn=up] {
+          margin-left: 2px; }
+        .form-count-control button[data-btn=down] {
+          margin-left: -18px; }
+        .form-count-control button:hover, .form-count-control button:focus {
+          cursor: pointer;
+          background: #2662de; }
+    .form-count-text {
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      margin-top: -0.9em;
+      padding-left: 10px; }
+  .form-title {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-family: "Open Sans", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    border-bottom: 1px solid #efefef;
+    text-align: left; }
+  .form hr {
+    margin-bottom: 20px; }
 
 .mob {
   display: none;
@@ -10583,8 +10610,10 @@ iframe {
       top: 77px;
       left: 100%; }
       .user__login__form__bg__icon svg {
-        width: 80px;
-        fill: #a5a1a1; }
+        width: 72px;
+        fill: #35a1f7;
+        box-shadow: 0 0 21px #d2c9c9;
+        border-radius: 3px; }
 
 .content table {
   background: #fff;

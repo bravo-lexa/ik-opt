@@ -8,14 +8,15 @@ $APPLICATION->SetTitle("О магазине");
 		<div class="container-main-aside">
 			<div class="user__aside" data-js-resize="user__aside__menu" data-size="md">
 				<div class="user__aside__menu">
-					<a href="/user-registration.php"><span>Регистрация</span></a>
-					<a href="/user-login.php"><span>Логин</span></a>
-					<a href="/user-backlogin.php"><span>Забыли пароль</span></a>
+					<a href="/user/registration/"><span>Регистрация</span></a>
+					<a href="/user/login/"><span>Логин</span></a>
+					<a href="/user/backlogin/"><span>Забыли пароль</span></a>
 				</div>
 			</div>
 		</div>
 		<div class="container-main-content">
             <?$APPLICATION->IncludeComponent("bitrix:system.auth.form", "default", Array(), false);?>
+            <? /*
 			<div class="user__login">
 				<div class="user__login__wrap">
 					<div class="user__login__form is-mini">
@@ -58,8 +59,8 @@ $APPLICATION->SetTitle("О магазине");
 						</div>
 					</div>
 				</div>
-
 			</div>
+			*/ ?>
 		</div>
 
 		<div class="col-1 col-md-24">

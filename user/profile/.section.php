@@ -1,0 +1,6 @@
+<?
+$sSectionName = "User";
+$arDirProperties = Array(
+
+);
+?>
