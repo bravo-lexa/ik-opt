@@ -13,7 +13,6 @@ Loc::loadMessages(__FILE__); // Вывод сообщений
 
 // * Моя библиотека для помощи в работе
 require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
-//$APP = new APP();
 ?>
 <!DOCTYPE html>
 <html xml:lang="<?=LANGUAGE_ID?>" lang="<?=LANGUAGE_ID?>" <?if(isset($_GET['dev'])){?> class="is-developer"<?}?>>

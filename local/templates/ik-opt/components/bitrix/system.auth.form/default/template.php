@@ -44,19 +44,16 @@ if($arResult['FORM_TYPE'] === 'logout') {
                         </div>
                     </div>
 
-
-
                     <? if ($arResult["STORE_PASSWORD"] == "Y"): ?>
-                        <tr>
-                            <td valign="top">
+                        <div class="form-group is-in-line is-offset">
+                            <div class="form-group-title"></div>
+                            <div class="form-input">
                                 <input type="checkbox" id="USER_REMEMBER_frm" name="USER_REMEMBER" value="Y"/>
-                            </td>
-                            <td width="100%">
                                 <label for="USER_REMEMBER_frm" title="<?= GetMessage("AUTH_REMEMBER_ME") ?>">
                                     <?echo GetMessage("AUTH_REMEMBER_SHORT") ?>
                                 </label>
-                            </td>
-                        </tr>
+                            </div>
+                        </div>
                     <?endif ?>
 
                     <? // Кнопки ?>
