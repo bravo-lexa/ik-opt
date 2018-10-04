@@ -1,9 +1,8 @@
 <?php
+
 /**
- * Created by PhpStorm.
- * User: radiofunt
- * Date: 03.10.2018
- * Time: 9:32
+ * Class Common
+ * @package APP\Common
  */
 
 namespace APP;

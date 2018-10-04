@@ -68,7 +68,7 @@ class Form {
         }
     }
     public function addField($name , $value ){
-        $this->form['fields'][$name] = APP::Text()->clear($value);
+        $this->form['fields'][$name] = \APP::Text()->clear($value);
         return $this;
     }
 }

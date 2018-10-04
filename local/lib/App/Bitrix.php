@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: radiofunt
- * Date: 03.10.2018
- * Time: 9:32
+ * Class Bitrix
+ * @package APP\Bitrix
  */
 namespace APP;
 

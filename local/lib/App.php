@@ -18,6 +18,7 @@ require_once(APPLIBS.'Form.php');
 require_once(APPLIBS.'Text.php');
 require_once(APPLIBS.'Router.php');
 require_once(APPLIBS.'Bitrix.php');
+require_once(APPLIBS.'User.php');
 
 class APP {
     static private $Common = false ;
@@ -25,6 +26,7 @@ class APP {
     static private $Text   = false;
     static private $Router = false;
     static private $Bitrix = false;
+    static private $User   = false;
 
     /**
      * Запускаем функции
@@ -35,7 +37,7 @@ class APP {
         return self::$Common;
     }
     static public function Form() {
-        if(self::$Form == false) self::$Form = new APP\Form;
+        if(self::$Form === false) self::$Form = new APP\Form;
         return self::$Form;
     }
     static public function Text() {
@@ -49,5 +51,9 @@ class APP {
     static public function Bitrix() {
         if(self::$Bitrix == false) self::$Bitrix = new APP\Bitrix;
         return self::$Bitrix;
+    }
+    static public function User() {
+        if(self::$User == false) self::$User = new APP\User;
+        return self::$User;
     }
 }

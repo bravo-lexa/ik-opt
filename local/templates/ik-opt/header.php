@@ -5,14 +5,13 @@ use Bitrix\Main\Page\Asset;
 // * * * * *
 Loc::loadMessages(__FILE__); // Вывод сообщений
 
+// * Моя библиотека для помощи в работе
+require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
 /*
  * Просто переменны для новчка
  * SITE_TEMPLATE_PATH; - Путь к шаблону сайта
  *
 */
-
-// * Моя библиотека для помощи в работе
-require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
 ?>
 <!DOCTYPE html>
 <html xml:lang="<?=LANGUAGE_ID?>" lang="<?=LANGUAGE_ID?>" <?if(isset($_GET['dev'])){?> class="is-developer"<?}?>>

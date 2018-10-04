@@ -2,7 +2,7 @@
 // * Заголовки для страниц
 $APPLICATION->SetTitle("Империя колготок");
 ?>
-    <div class="index__top-img container-fluid">
+<div class="index__top-img container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-18 col-md-24">
