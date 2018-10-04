@@ -8,42 +8,61 @@
 namespace APP;
 
 class Router {
+    private $segment = false;
+    private $segment_count = false;
     // * Сегментирование
     // * Получить массив сегдемтов
     public function get_segment($number = null)
     {
-        static $array;
-        if(!empty($array)) return $array;
+        // Если еще ни разу не делали этого
+        if(!$this->segment) {
+            static $array;
+            if (!empty($array)) return $array;
 
+            $arResult = array();
+            $url = explode('/', $_SERVER['REQUEST_URI']);
 
-
-        $arResult = array();
-        $url = explode('/', $_SERVER['REQUEST_URI']);
-
-        // * Разбиваем сигмент
-        $i = 1;
-        foreach ($url as $key => $item) {
-            if(!empty($item)) {
-                $arResult[$i] = $item;
-                $i++;
+            // * Разбиваем сигмент
+            $i = 1;
+            foreach ($url as $key => $item) {
+                if (!empty($item)) {
+                    $arResult[$i] = $item;
+                    $i++;
+                }
             }
+
+            $this->segment = $arResult;
         }
+
         // * Если нужно передать только один параметр
-        if(!empty($number)){
-            if(isset($arResult[$number])){
-                return $arResult[$number];
-            }else{
+        if (!empty($number)) {
+            if (isset($this->segment[$number])) {
+                return $this->segment[$number];
+            } else {
                 return false;
             }
-        }else{
-            return $arResult;
+        } else {
+            return $this->segment;
         }
     }
 
     // * Получить количество сегдметов в массиве
     public function get_segment_count()
     {
-        return count(self::get_segment_array());
+        if(!$this->segment_count) {
+            $this->segment_count = count($this->get_segment());
+        }
+        return $this->segment_count;
+    }
+    // * Получить путь в виде строки
+    public function get_segment_url() {
+        $url = false;
+
+        foreach ($this->get_segment() as $item){
+            $url .= '/'.$item;
+        }
+
+        return $url;
     }
 
     // * URL
@@ -65,17 +84,6 @@ class Router {
         $url = 'http';
         if (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS']=='on')) {$url .= "s";}
         $url .= "://".$_SERVER['HTTP_HOST'];
-        return $url;
-    }
-    // * Получить хост
-    public function get_url_folder() {
-        $url = false;
-
-        foreach (self::get_segment_array() as $item){
-            $url .= '/'.$item;
-        }
-        if(!ROUTER::get_element_code()) $url .= '/';
-
         return $url;
     }
 

@@ -24,7 +24,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
         $APPLICATION->ShowMeta('apple-mobile-web-app-status-bar-style');
         $APPLICATION->ShowMeta('SKYPE_TOOLBAR');
 
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/style.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH. '/assets/css/style.css');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/libs/jquery-3.3.1.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/libs/jquery-ui.min.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/libs/jquery.fancybox.min.js');
@@ -87,23 +87,48 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
                 </div>
                 <div class="header__top__right">
                     <div class="header__top__user">
-                        <a href="/login/" class="is-user">
-                            <i>
-                                <svg role="img" class="icon-svg">
-                                    <use xlink:href="#icon-user"></use>
-                                </svg>
-                            </i>
-                            <span>Вход</span>
-                        </a>
-                        <a href="/register/"><span>Регистрация</span></a>
-                        <a href="/login/" class="is-basket">
-                            <i>
-                                <svg role="img" class="icon-svg">
-                                    <use xlink:href="#icon-bascket"></use>
-                                </svg>
-                            </i>
-                            <span></span>
-                        </a>
+                        <?if(!APP::User()->is_authorized()):?>
+                            <a href="/user/login/" class="is-user">
+                                <i>
+                                    <svg role="img" class="icon-svg">
+                                        <use xlink:href="#icon-user"></use>
+                                    </svg>
+                                </i>
+                                <span>Вход</span>
+                            </a>
+                            <a href="/user/register/"><span>Регистрация</span></a>
+                            <a href="/" class="is-basket">
+                                <i>
+                                    <svg role="img" class="icon-svg">
+                                        <use xlink:href="#icon-bascket"></use>
+                                    </svg>
+                                </i>
+                                <span></span>
+                            </a>
+                        <?else:?>
+                            <a href="/user/profile/" class="is-user">
+                                <i>
+                                    <svg role="img" class="icon-svg">
+                                        <use xlink:href="#icon-user"></use>
+                                    </svg>
+                                </i>
+                                <span>Профиль</span>
+                            </a>
+                            <a href="<?echo $APPLICATION->GetCurPageParam("logout=yes", array(
+                                "login",
+                                "logout",
+                                "register",
+                                "forgot_password",
+                                "change_password"));?>"><span>Выход</span></a>
+                            <a href="/" class="is-basket">
+                                <i>
+                                    <svg role="img" class="icon-svg">
+                                        <use xlink:href="#icon-bascket"></use>
+                                    </svg>
+                                </i>
+                                <span></span>
+                            </a>
+                        <?endif;?>
                     </div>
                 </div>
                 <div class="mob-btn">
@@ -149,14 +174,14 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
                                             <b class="bitrix-include">
                                                 <? $APPLICATION->IncludeFile(SITE_DIR . "local/include/header/phone_1_code.php", Array(), Array("MODE" => "text")); ?>
                                             </b>
-                                            <? $APPLICATION->IncludeFile(SITE_DIR . "local/include/header/phone_1_number.php", Array(), Array("MODE" => "text")); ?>
+                                            <? $APPLICATION->IncludeFile( SITE_DIR . "local/include/header/phone_1_number.php", Array(), Array("MODE" => "text")); ?>
                                         </a>
                                         <a href="<?=APP::Common()->get_phone_link(APP::Bitrix()->includeFile("header/phone_2_code.php") . APP::Bitrix()->includeFile("header/phone_2_number.php"))?>"
                                            class="bitrix-include">
                                             <b class="bitrix-include">
                                                 <? $APPLICATION->IncludeFile(SITE_DIR . "local/include/header/phone_2_code.php", Array(), Array("MODE" => "text")); ?>
                                             </b>
-                                            <? $APPLICATION->IncludeFile(SITE_DIR . "local/include/header/phone_2_number.php", Array(), Array("MODE" => "text")); ?>
+                                            <? $APPLICATION->IncludeFile( SITE_DIR . "local/include/header/phone_2_number.php", Array(), Array("MODE" => "text")); ?>
                                         </a>
                                     </div>
                                     <div class="header__main__phone__btn">

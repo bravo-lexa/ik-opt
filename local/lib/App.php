@@ -31,7 +31,6 @@ class APP {
     /**
      * Запускаем функции
     */
-
     static public function Common() {
         if(self::$Common == false) self::$Common = new APP\Common;
         return self::$Common;

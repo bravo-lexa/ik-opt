@@ -9,24 +9,29 @@
 namespace APP;
 
 class User {
+
     // Проверка авторизован ли пользователь
     public function is_authorized ()
     {
-        return CUser::IsAuthorized();
+        return \CUser::IsAuthorized();
     }
 
-    //
+    // Выход
+    public function logout()
+    {
+        return \CUser::Logout();
+    }
+
+    // Получить
     public function get_login ()
     {
-       return CUser::GetFirstName()?CUser::GetFirstName():CUser::GetLogin();
+       return \CUser::GetFirstName()?\CUser::GetFirstName():\CUser::GetLogin();
     }
-
     public function get_user ()
     {
 
     }
-
-    public function get_group (){
-
+    public function get_group ()
+    {
     }
 }
