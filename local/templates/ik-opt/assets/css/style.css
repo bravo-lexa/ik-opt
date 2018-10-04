@@ -6574,9 +6574,9 @@ iframe {
           .form-group.is-in-line .form-select {
             display: block;
             width: 100% !important; } }
-        .form-group.is-in-line .form-input:nth-child(2n+1),
-        .form-group.is-in-line .form-select:nth-child(2n+1) {
-          margin-left: 2.5%;
+        .form-group.is-in-line .form-input:nth-child(2n+1), .form-group.is-in-line .form-input:nth-child(3n+1),
+        .form-group.is-in-line .form-select:nth-child(2n+1),
+        .form-group.is-in-line .form-select:nth-child(3n+1) {
           /*
     xl: 1200px Комп
     lg: 992px  Ноут
@@ -6585,16 +6585,23 @@ iframe {
     xs: 360px  Мобилки
   */ }
           @media only screen and (max-width: 575px) {
-            .form-group.is-in-line .form-input:nth-child(2n+1),
-            .form-group.is-in-line .form-select:nth-child(2n+1) {
+            .form-group.is-in-line .form-input:nth-child(2n+1), .form-group.is-in-line .form-input:nth-child(3n+1),
+            .form-group.is-in-line .form-select:nth-child(2n+1),
+            .form-group.is-in-line .form-select:nth-child(3n+1) {
               margin-left: 0;
               margin-top: 10px; } }
       .form-group.is-in-line-2 .form-input,
       .form-group.is-in-line-2 .form-select {
         width: 32.25%; }
+        .form-group.is-in-line-2 .form-input:nth-child(2n + 1),
+        .form-group.is-in-line-2 .form-select:nth-child(2n + 1) {
+          margin-left: 2.5%; }
       .form-group.is-in-line-3 .form-input,
       .form-group.is-in-line-3 .form-select {
-        width: 100px; }
+        width: 21.5%; }
+        .form-group.is-in-line-3 .form-input:nth-child(1n + 3),
+        .form-group.is-in-line-3 .form-select:nth-child(1n + 3) {
+          margin-left: 1.25%; }
       .form-group.is-offset {
         margin-bottom: 15px;
         /*

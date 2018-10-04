@@ -106,7 +106,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
                                 <span></span>
                             </a>
                         <?else:?>
-                            <a href="/user/profile/" class="is-user">
+                            <a href="/personal/" class="is-user">
                                 <i>
                                     <svg role="img" class="icon-svg">
                                         <use xlink:href="#icon-user"></use>

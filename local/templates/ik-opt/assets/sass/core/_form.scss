@@ -102,8 +102,9 @@
             display: block;
             width: 100% !important;
           }
-          &:nth-child(2n+1) {
-            margin-left: $line-margin-weight;
+
+          &:nth-child(2n+1),
+          &:nth-child(3n+1) {
             @include media(sm) {
               margin-left: 0;
               margin-top: 10px;
@@ -115,12 +116,18 @@
           & .form-input,
           & .form-select {
             width: ((100% - $line-title-weight) / 2) - $line-margin-weight / 2;
+            &:nth-child(2n + 1){
+              margin-left: $line-margin-weight;
+            }
           }
         }
         &-3 {
           & .form-input,
           & .form-select {
-            width: 100px;
+            width: ((100% - $line-title-weight) / 3) - $line-margin-weight / 3;
+            &:nth-child(1n + 3){
+              margin-left: $line-margin-weight / 2;
+            }
           }
         }
       }
