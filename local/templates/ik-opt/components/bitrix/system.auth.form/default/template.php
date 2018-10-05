@@ -3,7 +3,7 @@ CJSCore::Init();
 
 // Редирект пользльзовается, если он авторизовон
 if($arResult['FORM_TYPE'] === 'logout') {
-    APP::Router()->redirect('user/profile/');
+    APP::Router()->redirect('personal/');
 }
 ?>
 
