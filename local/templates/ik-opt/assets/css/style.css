@@ -4219,7 +4219,7 @@ iframe {
   height: 0;
   visibility: hidden; }
 
-.col, .header__menu > li, .index__utp__list .item, .index__news__list .item__content__img__wrap, .catalog__list .item__content, .catalog__list .item__content__img__wrap, .catalog__list-cat .item__content, .catalog__list-cat .item__content__img__wrap, .news__list .item__content__img__wrap, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .container-main-aside, .catalog__list .item, .col-7, .col-8, .index__news__list .item, .index__sot__list .item, .catalog__list.is-3 .item, .catalog__list-cat .item, .col-9, .col-10, .col-11, .col-12, .catalog__detail__inf__left, .catalog__detail__inf__right, .news__list .item, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .container-main-content, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-13, .col-sm-14, .col-sm-15, .col-sm-16, .col-sm-17, .col-sm-18, .col-sm-19, .col-sm-20, .col-sm-21, .col-sm-22, .col-sm-23, .col-sm-24, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16, .col-md-17, .col-md-18, .col-md-19, .col-md-20, .col-md-21, .col-md-22, .col-md-23, .col-md-24, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-13, .col-lg-14, .col-lg-15, .col-lg-16, .col-lg-17, .col-lg-18, .col-lg-19, .col-lg-20, .col-lg-21, .col-lg-22, .col-lg-23, .col-lg-24, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-13, .col-xl-14, .col-xl-15, .col-xl-16, .col-xl-17, .col-xl-18, .col-xl-19, .col-xl-20, .col-xl-21, .col-xl-22, .col-xl-23, .col-xl-24 {
+.col, .header__menu > li, .index__utp__list .item, .index__news__list .item__content__img__wrap, .catalog__list .item__content, .catalog__list .item__content__img__wrap, .catalog__list-cat .item__content, .catalog__list-cat .item__content__img__wrap, .news__list .item__content__img__wrap, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .container-main-aside, .catalog__list .item, .catalog__list-cat .item, .col-7, .col-8, .index__news__list .item, .index__sot__list .item, .catalog__list.is-3 .item, .col-9, .col-10, .col-11, .col-12, .catalog__detail__inf__left, .catalog__detail__inf__right, .news__list .item, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .container-main-content, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-13, .col-sm-14, .col-sm-15, .col-sm-16, .col-sm-17, .col-sm-18, .col-sm-19, .col-sm-20, .col-sm-21, .col-sm-22, .col-sm-23, .col-sm-24, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16, .col-md-17, .col-md-18, .col-md-19, .col-md-20, .col-md-21, .col-md-22, .col-md-23, .col-md-24, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-13, .col-lg-14, .col-lg-15, .col-lg-16, .col-lg-17, .col-lg-18, .col-lg-19, .col-lg-20, .col-lg-21, .col-lg-22, .col-lg-23, .col-lg-24, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-13, .col-xl-14, .col-xl-15, .col-xl-16, .col-xl-17, .col-xl-18, .col-xl-19, .col-xl-20, .col-xl-21, .col-xl-22, .col-xl-23, .col-xl-24 {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -4230,11 +4230,11 @@ iframe {
   margin-left: -15px;
   margin-right: -15px; }
 
-.col, .header__menu > li, .index__utp__list .item, .index__news__list .item__content__img__wrap, .catalog__list .item__content, .catalog__list .item__content__img__wrap, .catalog__list-cat .item__content, .catalog__list-cat .item__content__img__wrap, .news__list .item__content__img__wrap, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .container-main-aside, .catalog__list .item, .col-7, .col-8, .index__news__list .item, .index__sot__list .item, .catalog__list.is-3 .item, .catalog__list-cat .item, .col-9, .col-10, .col-11, .col-12, .catalog__detail__inf__left, .catalog__detail__inf__right, .news__list .item, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .container-main-content, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-13, .col-sm-14, .col-sm-15, .col-sm-16, .col-sm-17, .col-sm-18, .col-sm-19, .col-sm-20, .col-sm-21, .col-sm-22, .col-sm-23, .col-sm-24, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16, .col-md-17, .col-md-18, .col-md-19, .col-md-20, .col-md-21, .col-md-22, .col-md-23, .col-md-24, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-13, .col-lg-14, .col-lg-15, .col-lg-16, .col-lg-17, .col-lg-18, .col-lg-19, .col-lg-20, .col-lg-21, .col-lg-22, .col-lg-23, .col-lg-24, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-13, .col-xl-14, .col-xl-15, .col-xl-16, .col-xl-17, .col-xl-18, .col-xl-19, .col-xl-20, .col-xl-21, .col-xl-22, .col-xl-23, .col-xl-24 {
+.col, .header__menu > li, .index__utp__list .item, .index__news__list .item__content__img__wrap, .catalog__list .item__content, .catalog__list .item__content__img__wrap, .catalog__list-cat .item__content, .catalog__list-cat .item__content__img__wrap, .news__list .item__content__img__wrap, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .container-main-aside, .catalog__list .item, .catalog__list-cat .item, .col-7, .col-8, .index__news__list .item, .index__sot__list .item, .catalog__list.is-3 .item, .col-9, .col-10, .col-11, .col-12, .catalog__detail__inf__left, .catalog__detail__inf__right, .news__list .item, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .container-main-content, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-13, .col-sm-14, .col-sm-15, .col-sm-16, .col-sm-17, .col-sm-18, .col-sm-19, .col-sm-20, .col-sm-21, .col-sm-22, .col-sm-23, .col-sm-24, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16, .col-md-17, .col-md-18, .col-md-19, .col-md-20, .col-md-21, .col-md-22, .col-md-23, .col-md-24, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-13, .col-lg-14, .col-lg-15, .col-lg-16, .col-lg-17, .col-lg-18, .col-lg-19, .col-lg-20, .col-lg-21, .col-lg-22, .col-lg-23, .col-lg-24, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-13, .col-xl-14, .col-xl-15, .col-xl-16, .col-xl-17, .col-xl-18, .col-xl-19, .col-xl-20, .col-xl-21, .col-xl-22, .col-xl-23, .col-xl-24 {
   padding-right: 15px;
   padding-left: 15px; }
 
-.col, .header__menu > li, .index__utp__list .item, .index__news__list .item__content__img__wrap, .catalog__list .item__content, .catalog__list .item__content__img__wrap, .catalog__list-cat .item__content, .catalog__list-cat .item__content__img__wrap, .news__list .item__content__img__wrap, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .container-main-aside, .catalog__list .item, .col-7, .col-8, .index__news__list .item, .index__sot__list .item, .catalog__list.is-3 .item, .catalog__list-cat .item, .col-9, .col-10, .col-11, .col-12, .catalog__detail__inf__left, .catalog__detail__inf__right, .news__list .item, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .container-main-content, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-13, .col-sm-14, .col-sm-15, .col-sm-16, .col-sm-17, .col-sm-18, .col-sm-19, .col-sm-20, .col-sm-21, .col-sm-22, .col-sm-23, .col-sm-24, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16, .col-md-17, .col-md-18, .col-md-19, .col-md-20, .col-md-21, .col-md-22, .col-md-23, .col-md-24, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-13, .col-lg-14, .col-lg-15, .col-lg-16, .col-lg-17, .col-lg-18, .col-lg-19, .col-lg-20, .col-lg-21, .col-lg-22, .col-lg-23, .col-lg-24, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-13, .col-xl-14, .col-xl-15, .col-xl-16, .col-xl-17, .col-xl-18, .col-xl-19, .col-xl-20, .col-xl-21, .col-xl-22, .col-xl-23, .col-xl-24 {
+.col, .header__menu > li, .index__utp__list .item, .index__news__list .item__content__img__wrap, .catalog__list .item__content, .catalog__list .item__content__img__wrap, .catalog__list-cat .item__content, .catalog__list-cat .item__content__img__wrap, .news__list .item__content__img__wrap, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .container-main-aside, .catalog__list .item, .catalog__list-cat .item, .col-7, .col-8, .index__news__list .item, .index__sot__list .item, .catalog__list.is-3 .item, .col-9, .col-10, .col-11, .col-12, .catalog__detail__inf__left, .catalog__detail__inf__right, .news__list .item, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .container-main-content, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-13, .col-sm-14, .col-sm-15, .col-sm-16, .col-sm-17, .col-sm-18, .col-sm-19, .col-sm-20, .col-sm-21, .col-sm-22, .col-sm-23, .col-sm-24, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16, .col-md-17, .col-md-18, .col-md-19, .col-md-20, .col-md-21, .col-md-22, .col-md-23, .col-md-24, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-13, .col-lg-14, .col-lg-15, .col-lg-16, .col-lg-17, .col-lg-18, .col-lg-19, .col-lg-20, .col-lg-21, .col-lg-22, .col-lg-23, .col-lg-24, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-13, .col-xl-14, .col-xl-15, .col-xl-16, .col-xl-17, .col-xl-18, .col-xl-19, .col-xl-20, .col-xl-21, .col-xl-22, .col-xl-23, .col-xl-24 {
   width: 100%; }
 
 .container {
@@ -4315,7 +4315,7 @@ iframe {
     vertical-align: middle;
     padding-left: 0;
     padding-right: 0; }
-  .row-table > .col-6, .header__menu > .col-6, .index__utp__list > .col-6, .index__news__list .item__content__img > .col-6, .catalog__list .item__wrap > .col-6, .catalog__list .item__content__img > .col-6, .catalog__list-cat .item__wrap > .col-6, .catalog__list-cat .item__content__img > .col-6, .catalog__detail__img > .col-6, .catalog__detail__img__wrap > .col-6, .catalog__detail__inf > .col-6, .order__one-click__element__img > .col-6, .news__list .item__content__img > .col-6, .row-table > .container-main-aside, .header__menu > .container-main-aside, .index__utp__list > .container-main-aside, .index__news__list .item__content__img > .container-main-aside, .catalog__list .item__wrap > .container-main-aside, .catalog__list .item__content__img > .container-main-aside, .catalog__list-cat .item__wrap > .container-main-aside, .catalog__list-cat .item__content__img > .container-main-aside, .catalog__detail__img > .container-main-aside, .catalog__detail__img__wrap > .container-main-aside, .catalog__detail__inf > .container-main-aside, .order__one-click__element__img > .container-main-aside, .news__list .item__content__img > .container-main-aside, .catalog__list .row-table > .item, .catalog__list .header__menu > .item, .catalog__list .index__utp__list > .item, .catalog__list .index__news__list .item__content__img > .item, .catalog__list .item__wrap > .item, .catalog__list .item__content__img > .item, .catalog__list .catalog__list-cat .item__wrap > .item, .catalog__list .catalog__list-cat .item__content__img > .item, .catalog__list .catalog__detail__img > .item, .catalog__list .catalog__detail__img__wrap > .item, .catalog__list .catalog__detail__inf > .item, .catalog__list .order__one-click__element__img > .item, .catalog__list .news__list .item__content__img > .item {
+  .row-table > .col-6, .header__menu > .col-6, .index__utp__list > .col-6, .index__news__list .item__content__img > .col-6, .catalog__list .item__wrap > .col-6, .catalog__list .item__content__img > .col-6, .catalog__list-cat .item__wrap > .col-6, .catalog__list-cat .item__content__img > .col-6, .catalog__detail__img > .col-6, .catalog__detail__img__wrap > .col-6, .catalog__detail__inf > .col-6, .order__one-click__element__img > .col-6, .news__list .item__content__img > .col-6, .row-table > .container-main-aside, .header__menu > .container-main-aside, .index__utp__list > .container-main-aside, .index__news__list .item__content__img > .container-main-aside, .catalog__list .item__wrap > .container-main-aside, .catalog__list .item__content__img > .container-main-aside, .catalog__list-cat .item__wrap > .container-main-aside, .catalog__list-cat .item__content__img > .container-main-aside, .catalog__detail__img > .container-main-aside, .catalog__detail__img__wrap > .container-main-aside, .catalog__detail__inf > .container-main-aside, .order__one-click__element__img > .container-main-aside, .news__list .item__content__img > .container-main-aside, .catalog__list .row-table > .item, .catalog__list .header__menu > .item, .catalog__list .index__utp__list > .item, .catalog__list .index__news__list .item__content__img > .item, .catalog__list .item__wrap > .item, .catalog__list .item__content__img > .item, .catalog__list .catalog__detail__img > .item, .catalog__list .catalog__detail__img__wrap > .item, .catalog__list .catalog__detail__inf > .item, .catalog__list .order__one-click__element__img > .item, .catalog__list .news__list .item__content__img > .item, .catalog__list-cat .row-table > .item, .catalog__list-cat .header__menu > .item, .catalog__list-cat .index__utp__list > .item, .catalog__list-cat .index__news__list .item__content__img > .item, .catalog__list-cat .item__wrap > .item, .catalog__list-cat .item__content__img > .item, .catalog__list-cat .catalog__detail__img > .item, .catalog__list-cat .catalog__detail__img__wrap > .item, .catalog__list-cat .catalog__detail__inf > .item, .catalog__list-cat .order__one-click__element__img > .item, .catalog__list-cat .news__list .item__content__img > .item {
     display: table-cell;
     float: none;
     vertical-align: middle;
@@ -4327,7 +4327,7 @@ iframe {
     vertical-align: middle;
     padding-left: 0;
     padding-right: 0; }
-  .row-table > .col-8, .header__menu > .col-8, .index__utp__list > .col-8, .index__news__list .item__content__img > .col-8, .catalog__list .item__wrap > .col-8, .catalog__list .item__content__img > .col-8, .catalog__list-cat .item__wrap > .col-8, .catalog__list-cat .item__content__img > .col-8, .catalog__detail__img > .col-8, .catalog__detail__img__wrap > .col-8, .catalog__detail__inf > .col-8, .order__one-click__element__img > .col-8, .news__list .item__content__img > .col-8, .index__news__list .row-table > .item, .index__news__list .header__menu > .item, .index__news__list .index__utp__list > .item, .index__news__list .item__content__img > .item, .catalog__list .index__news__list .item__wrap > .item, .index__news__list .catalog__list .item__wrap > .item, .index__news__list .catalog__list .item__content__img > .item, .catalog__list-cat .index__news__list .item__wrap > .item, .index__news__list .catalog__detail__img > .item, .index__news__list .catalog__detail__img__wrap > .item, .index__news__list .catalog__detail__inf > .item, .index__news__list .order__one-click__element__img > .item, .index__news__list .news__list .item__content__img > .item, .index__sot__list .row-table > .item, .index__sot__list .header__menu > .item, .index__sot__list .index__utp__list > .item, .index__news__list .index__sot__list .item__content__img > .item, .catalog__list .index__sot__list .item__wrap > .item, .index__sot__list .catalog__list .item__wrap > .item, .catalog__list .index__sot__list .item__content__img > .item, .index__sot__list .catalog__list .item__content__img > .item, .catalog__list-cat .index__sot__list .item__wrap > .item, .catalog__list-cat .index__sot__list .item__content__img > .item, .index__sot__list .catalog__detail__img > .item, .index__sot__list .catalog__detail__img__wrap > .item, .index__sot__list .catalog__detail__inf > .item, .index__sot__list .order__one-click__element__img > .item, .news__list .index__sot__list .item__content__img > .item, .index__sot__list .news__list .item__content__img > .item, .catalog__list.is-3 .row-table > .item, .catalog__list.is-3 .header__menu > .item, .catalog__list.is-3 .index__utp__list > .item, .catalog__list.is-3 .item__wrap > .item, .catalog__list.is-3 .item__content__img > .item, .catalog__list.is-3 .catalog__detail__img > .item, .catalog__list.is-3 .catalog__detail__img__wrap > .item, .catalog__list.is-3 .catalog__detail__inf > .item, .catalog__list.is-3 .order__one-click__element__img > .item, .catalog__list.is-3 .news__list .item__content__img > .item, .catalog__list-cat .row-table > .item, .catalog__list-cat .header__menu > .item, .catalog__list-cat .index__utp__list > .item, .catalog__list-cat .catalog__list .item__wrap > .item, .catalog__list-cat .catalog__list .item__content__img > .item, .catalog__list-cat .item__wrap > .item, .catalog__list-cat .item__content__img > .item, .catalog__list-cat .catalog__detail__img > .item, .catalog__list-cat .catalog__detail__img__wrap > .item, .catalog__list-cat .catalog__detail__inf > .item, .catalog__list-cat .order__one-click__element__img > .item, .catalog__list-cat .news__list .item__content__img > .item {
+  .row-table > .col-8, .header__menu > .col-8, .index__utp__list > .col-8, .index__news__list .item__content__img > .col-8, .catalog__list .item__wrap > .col-8, .catalog__list .item__content__img > .col-8, .catalog__list-cat .item__wrap > .col-8, .catalog__list-cat .item__content__img > .col-8, .catalog__detail__img > .col-8, .catalog__detail__img__wrap > .col-8, .catalog__detail__inf > .col-8, .order__one-click__element__img > .col-8, .news__list .item__content__img > .col-8, .index__news__list .row-table > .item, .index__news__list .header__menu > .item, .index__news__list .index__utp__list > .item, .index__news__list .item__content__img > .item, .catalog__list .index__news__list .item__wrap > .item, .index__news__list .catalog__list .item__wrap > .item, .index__news__list .catalog__list .item__content__img > .item, .catalog__list-cat .index__news__list .item__wrap > .item, .index__news__list .catalog__list-cat .item__wrap > .item, .index__news__list .catalog__list-cat .item__content__img > .item, .index__news__list .catalog__detail__img > .item, .index__news__list .catalog__detail__img__wrap > .item, .index__news__list .catalog__detail__inf > .item, .index__news__list .order__one-click__element__img > .item, .index__news__list .news__list .item__content__img > .item, .index__sot__list .row-table > .item, .index__sot__list .header__menu > .item, .index__sot__list .index__utp__list > .item, .index__news__list .index__sot__list .item__content__img > .item, .catalog__list .index__sot__list .item__wrap > .item, .index__sot__list .catalog__list .item__wrap > .item, .catalog__list .index__sot__list .item__content__img > .item, .index__sot__list .catalog__list .item__content__img > .item, .catalog__list-cat .index__sot__list .item__wrap > .item, .index__sot__list .catalog__list-cat .item__wrap > .item, .catalog__list-cat .index__sot__list .item__content__img > .item, .index__sot__list .catalog__list-cat .item__content__img > .item, .index__sot__list .catalog__detail__img > .item, .index__sot__list .catalog__detail__img__wrap > .item, .index__sot__list .catalog__detail__inf > .item, .index__sot__list .order__one-click__element__img > .item, .news__list .index__sot__list .item__content__img > .item, .index__sot__list .news__list .item__content__img > .item, .catalog__list.is-3 .row-table > .item, .catalog__list.is-3 .header__menu > .item, .catalog__list.is-3 .index__utp__list > .item, .catalog__list.is-3 .item__wrap > .item, .catalog__list.is-3 .item__content__img > .item, .catalog__list.is-3 .catalog__list-cat .item__wrap > .item, .catalog__list.is-3 .catalog__list-cat .item__content__img > .item, .catalog__list.is-3 .catalog__detail__img > .item, .catalog__list.is-3 .catalog__detail__img__wrap > .item, .catalog__list.is-3 .catalog__detail__inf > .item, .catalog__list.is-3 .order__one-click__element__img > .item, .catalog__list.is-3 .news__list .item__content__img > .item {
     display: table-cell;
     float: none;
     vertical-align: middle;
@@ -4439,11 +4439,11 @@ iframe {
     vertical-align: top; }
   .row-table-top .col-5 {
     vertical-align: top; }
-  .row-table-top .col-6, .row-table-top .container-main-aside, .row-table-top .catalog__list .item, .catalog__list .row-table-top .item {
+  .row-table-top .col-6, .row-table-top .container-main-aside, .row-table-top .catalog__list .item, .catalog__list .row-table-top .item, .row-table-top .catalog__list-cat .item, .catalog__list-cat .row-table-top .item {
     vertical-align: top; }
   .row-table-top .col-7 {
     vertical-align: top; }
-  .row-table-top .col-8, .row-table-top .index__news__list .item, .index__news__list .row-table-top .item, .row-table-top .index__sot__list .item, .index__sot__list .row-table-top .item, .row-table-top .catalog__list.is-3 .item, .catalog__list.is-3 .row-table-top .item, .row-table-top .catalog__list-cat .item, .catalog__list-cat .row-table-top .item {
+  .row-table-top .col-8, .row-table-top .index__news__list .item, .index__news__list .row-table-top .item, .row-table-top .index__sot__list .item, .index__sot__list .row-table-top .item, .row-table-top .catalog__list.is-3 .item, .catalog__list.is-3 .row-table-top .item {
     vertical-align: top; }
   .row-table-top .col-9 {
     vertical-align: top; }
@@ -4487,11 +4487,11 @@ iframe {
     vertical-align: bottom; }
   .row-table-bottom .col-5 {
     vertical-align: bottom; }
-  .row-table-bottom .col-6, .row-table-bottom .container-main-aside, .row-table-bottom .catalog__list .item, .catalog__list .row-table-bottom .item {
+  .row-table-bottom .col-6, .row-table-bottom .container-main-aside, .row-table-bottom .catalog__list .item, .catalog__list .row-table-bottom .item, .row-table-bottom .catalog__list-cat .item, .catalog__list-cat .row-table-bottom .item {
     vertical-align: bottom; }
   .row-table-bottom .col-7 {
     vertical-align: bottom; }
-  .row-table-bottom .col-8, .row-table-bottom .index__news__list .item, .index__news__list .row-table-bottom .item, .row-table-bottom .index__sot__list .item, .index__sot__list .row-table-bottom .item, .row-table-bottom .catalog__list.is-3 .item, .catalog__list.is-3 .row-table-bottom .item, .row-table-bottom .catalog__list-cat .item, .catalog__list-cat .row-table-bottom .item {
+  .row-table-bottom .col-8, .row-table-bottom .index__news__list .item, .index__news__list .row-table-bottom .item, .row-table-bottom .index__sot__list .item, .index__sot__list .row-table-bottom .item, .row-table-bottom .catalog__list.is-3 .item, .catalog__list.is-3 .row-table-bottom .item {
     vertical-align: bottom; }
   .row-table-bottom .col-9 {
     vertical-align: bottom; }
@@ -4544,13 +4544,13 @@ iframe {
 .row-right .col-5 {
   float: right; }
 
-.row-right .col-6, .row-right .container-main-aside, .row-right .catalog__list .item, .catalog__list .row-right .item {
+.row-right .col-6, .row-right .container-main-aside, .row-right .catalog__list .item, .catalog__list .row-right .item, .row-right .catalog__list-cat .item, .catalog__list-cat .row-right .item {
   float: right; }
 
 .row-right .col-7 {
   float: right; }
 
-.row-right .col-8, .row-right .index__news__list .item, .index__news__list .row-right .item, .row-right .index__sot__list .item, .index__sot__list .row-right .item, .row-right .catalog__list.is-3 .item, .catalog__list.is-3 .row-right .item, .row-right .catalog__list-cat .item, .catalog__list-cat .row-right .item {
+.row-right .col-8, .row-right .index__news__list .item, .index__news__list .row-right .item, .row-right .index__sot__list .item, .index__sot__list .row-right .item, .row-right .catalog__list.is-3 .item, .catalog__list.is-3 .row-right .item {
   float: right; }
 
 .row-right .col-9 {
@@ -4615,11 +4615,11 @@ iframe {
     width: 16.6666666667%; }
   .col-5 {
     width: 20.8333333333%; }
-  .col-6, .container-main-aside, .catalog__list .item {
+  .col-6, .container-main-aside, .catalog__list .item, .catalog__list-cat .item {
     width: 25%; }
   .col-7 {
     width: 29.1666666667%; }
-  .col-8, .index__news__list .item, .index__sot__list .item, .catalog__list.is-3 .item, .catalog__list-cat .item {
+  .col-8, .index__news__list .item, .index__sot__list .item, .catalog__list.is-3 .item {
     width: 33.3333333333%; }
   .col-9 {
     width: 37.5%; }
@@ -4761,7 +4761,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-xl-table-none .col-6, .row-xl-table-none .container-main-aside, .row-xl-table-none .catalog__list .item, .catalog__list .row-xl-table-none .item {
+    .row-xl-table-none .col-6, .row-xl-table-none .container-main-aside, .row-xl-table-none .catalog__list .item, .catalog__list .row-xl-table-none .item, .row-xl-table-none .catalog__list-cat .item, .catalog__list-cat .row-xl-table-none .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -4781,7 +4781,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-xl-table-none .col-8, .row-xl-table-none .index__news__list .item, .index__news__list .row-xl-table-none .item, .row-xl-table-none .index__sot__list .item, .index__sot__list .row-xl-table-none .item, .row-xl-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-xl-table-none .item, .row-xl-table-none .catalog__list-cat .item, .catalog__list-cat .row-xl-table-none .item {
+    .row-xl-table-none .col-8, .row-xl-table-none .index__news__list .item, .index__news__list .row-xl-table-none .item, .row-xl-table-none .index__sot__list .item, .index__sot__list .row-xl-table-none .item, .row-xl-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-xl-table-none .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -5017,7 +5017,7 @@ iframe {
     width: 25%; }
   .col-lg-7 {
     width: 29.1666666667%; }
-  .col-lg-8, .container-main-aside, .catalog__list .item {
+  .col-lg-8, .container-main-aside, .catalog__list .item, .catalog__list-cat .item {
     width: 33.3333333333%; }
   .col-lg-9 {
     width: 37.5%; }
@@ -5025,7 +5025,7 @@ iframe {
     width: 41.6666666667%; }
   .col-lg-11 {
     width: 45.8333333333%; }
-  .col-lg-12, .index__utp__list .item, .catalog__list.is-3 .item, .catalog__list-cat .item {
+  .col-lg-12, .index__utp__list .item, .catalog__list.is-3 .item {
     width: 50%; }
   .col-lg-13 {
     width: 54.1666666667%; }
@@ -5109,7 +5109,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-lg-table-none .col-6, .index__utp__list .col-6, .row-lg-table-none .container-main-aside, .index__utp__list .container-main-aside, .row-lg-table-none .catalog__list .item, .catalog__list .row-lg-table-none .item, .index__utp__list .catalog__list .item, .catalog__list .index__utp__list .item {
+    .row-lg-table-none .col-6, .index__utp__list .col-6, .row-lg-table-none .container-main-aside, .index__utp__list .container-main-aside, .row-lg-table-none .catalog__list .item, .catalog__list .row-lg-table-none .item, .index__utp__list .catalog__list .item, .catalog__list .index__utp__list .item, .row-lg-table-none .catalog__list-cat .item, .catalog__list-cat .row-lg-table-none .item, .index__utp__list .catalog__list-cat .item, .catalog__list-cat .index__utp__list .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -5129,12 +5129,12 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-lg-table-none .col-8, .index__utp__list .col-8, .row-lg-table-none .index__news__list .item, .index__news__list .row-lg-table-none .item, .index__utp__list .index__news__list .item, .index__news__list .index__utp__list .item, .row-lg-table-none .index__sot__list .item, .index__sot__list .row-lg-table-none .item, .index__utp__list .index__sot__list .item, .index__sot__list .index__utp__list .item, .row-lg-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-lg-table-none .item, .index__utp__list .catalog__list.is-3 .item, .catalog__list.is-3 .index__utp__list .item, .row-lg-table-none .catalog__list-cat .item, .catalog__list-cat .row-lg-table-none .item, .index__utp__list .catalog__list-cat .item, .catalog__list-cat .index__utp__list .item {
+    .row-lg-table-none .col-8, .index__utp__list .col-8, .row-lg-table-none .index__news__list .item, .index__news__list .row-lg-table-none .item, .index__utp__list .index__news__list .item, .index__news__list .index__utp__list .item, .row-lg-table-none .index__sot__list .item, .index__sot__list .row-lg-table-none .item, .index__utp__list .index__sot__list .item, .index__sot__list .index__utp__list .item, .row-lg-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-lg-table-none .item, .index__utp__list .catalog__list.is-3 .item, .catalog__list.is-3 .index__utp__list .item {
       display: block;
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-lg-table-none .col-lg-8, .index__utp__list .col-lg-8, .row-lg-table-none .container-main-aside, .index__utp__list .container-main-aside, .row-lg-table-none .catalog__list .item, .catalog__list .row-lg-table-none .item, .index__utp__list .catalog__list .item, .catalog__list .index__utp__list .item {
+    .row-lg-table-none .col-lg-8, .index__utp__list .col-lg-8, .row-lg-table-none .container-main-aside, .index__utp__list .container-main-aside, .row-lg-table-none .catalog__list .item, .catalog__list .row-lg-table-none .item, .index__utp__list .catalog__list .item, .catalog__list .index__utp__list .item, .row-lg-table-none .catalog__list-cat .item, .catalog__list-cat .row-lg-table-none .item, .index__utp__list .catalog__list-cat .item, .catalog__list-cat .index__utp__list .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -5174,7 +5174,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-lg-table-none .col-lg-12, .index__utp__list .col-lg-12, .index__utp__list .item, .row-lg-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-lg-table-none .item, .index__utp__list .catalog__list.is-3 .item, .catalog__list.is-3 .index__utp__list .item, .row-lg-table-none .catalog__list-cat .item, .catalog__list-cat .row-lg-table-none .item {
+    .row-lg-table-none .col-lg-12, .index__utp__list .col-lg-12, .index__utp__list .item, .row-lg-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-lg-table-none .item, .index__utp__list .catalog__list.is-3 .item, .catalog__list.is-3 .index__utp__list .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -5457,7 +5457,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-md-table-none .col-6, .row-md-table-none .container-main-aside, .row-md-table-none .catalog__list .item, .catalog__list .row-md-table-none .item {
+    .row-md-table-none .col-6, .row-md-table-none .container-main-aside, .row-md-table-none .catalog__list .item, .catalog__list .row-md-table-none .item, .row-md-table-none .catalog__list-cat .item, .catalog__list-cat .row-md-table-none .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -5477,7 +5477,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-md-table-none .col-8, .row-md-table-none .index__news__list .item, .index__news__list .row-md-table-none .item, .row-md-table-none .index__sot__list .item, .index__sot__list .row-md-table-none .item, .row-md-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-md-table-none .item, .row-md-table-none .catalog__list-cat .item, .catalog__list-cat .row-md-table-none .item {
+    .row-md-table-none .col-8, .row-md-table-none .index__news__list .item, .index__news__list .row-md-table-none .item, .row-md-table-none .index__sot__list .item, .index__sot__list .row-md-table-none .item, .row-md-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-md-table-none .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -5805,7 +5805,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-sm-table-none .col-6, .row-sm-table-none .container-main-aside, .row-sm-table-none .catalog__list .item, .catalog__list .row-sm-table-none .item {
+    .row-sm-table-none .col-6, .row-sm-table-none .container-main-aside, .row-sm-table-none .catalog__list .item, .catalog__list .row-sm-table-none .item, .row-sm-table-none .catalog__list-cat .item, .catalog__list-cat .row-sm-table-none .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -5825,7 +5825,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-sm-table-none .col-8, .row-sm-table-none .index__news__list .item, .index__news__list .row-sm-table-none .item, .row-sm-table-none .index__sot__list .item, .index__sot__list .row-sm-table-none .item, .row-sm-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-sm-table-none .item, .row-sm-table-none .catalog__list-cat .item, .catalog__list-cat .row-sm-table-none .item {
+    .row-sm-table-none .col-8, .row-sm-table-none .index__news__list .item, .index__news__list .row-sm-table-none .item, .row-sm-table-none .index__sot__list .item, .index__sot__list .row-sm-table-none .item, .row-sm-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-sm-table-none .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -6153,7 +6153,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-xs-table-none .col-6, .row-xs-table-none .container-main-aside, .row-xs-table-none .catalog__list .item, .catalog__list .row-xs-table-none .item {
+    .row-xs-table-none .col-6, .row-xs-table-none .container-main-aside, .row-xs-table-none .catalog__list .item, .catalog__list .row-xs-table-none .item, .row-xs-table-none .catalog__list-cat .item, .catalog__list-cat .row-xs-table-none .item {
       display: block;
       float: left;
       padding-left: 15px;
@@ -6173,7 +6173,7 @@ iframe {
       float: left;
       padding-left: 15px;
       padding-right: 15px; }
-    .row-xs-table-none .col-8, .row-xs-table-none .index__news__list .item, .index__news__list .row-xs-table-none .item, .row-xs-table-none .index__sot__list .item, .index__sot__list .row-xs-table-none .item, .row-xs-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-xs-table-none .item, .row-xs-table-none .catalog__list-cat .item, .catalog__list-cat .row-xs-table-none .item {
+    .row-xs-table-none .col-8, .row-xs-table-none .index__news__list .item, .index__news__list .row-xs-table-none .item, .row-xs-table-none .index__sot__list .item, .index__sot__list .row-xs-table-none .item, .row-xs-table-none .catalog__list.is-3 .item, .catalog__list.is-3 .row-xs-table-none .item {
       display: block;
       float: left;
       padding-left: 15px;

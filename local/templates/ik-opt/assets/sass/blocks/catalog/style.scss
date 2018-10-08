@@ -188,8 +188,8 @@
       padding-bottom: 20px;
       margin-bottom: 8px;
       margin-top: 2px;
-      @extend .col-8;
-      @extend .col-lg-12;
+      @extend .col-6;
+      @extend .col-lg-8;
       @extend .col-md-24;
       @extend .col-sm-24;
       &__wrap {
