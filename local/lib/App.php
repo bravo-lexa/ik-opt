@@ -19,6 +19,7 @@ require_once(APPLIBS.'Text.php');
 require_once(APPLIBS.'Router.php');
 require_once(APPLIBS.'Bitrix.php');
 require_once(APPLIBS.'User.php');
+require_once(APPLIBS.'Includs.php');
 
 class APP {
     static private $Common = false ;
@@ -27,6 +28,7 @@ class APP {
     static private $Router = false;
     static private $Bitrix = false;
     static private $User   = false;
+    static private $Includs   = false;
 
     /**
      * Запускаем функции
@@ -54,5 +56,9 @@ class APP {
     static public function User() {
         if(self::$User == false) self::$User = new APP\User;
         return self::$User;
+    }
+    static public function Includs() {
+        if(self::$Includs == false) self::$Includs = new APP\Includs;
+        return self::$Includs;
     }
 }

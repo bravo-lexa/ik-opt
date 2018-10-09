@@ -164,12 +164,10 @@ if (isset($arCurrentValues['IBLOCK_ID']) && (int)$arCurrentValues['IBLOCK_ID'] >
 		{
 			$arFilePropList[$arProp['CODE']] = $strPropName;
 		}
-
 		if ('L' == $arProp['PROPERTY_TYPE'])
 		{
 			$arListPropList[$arProp['CODE']] = $strPropName;
 		}
-
 		if ('S' == $arProp['PROPERTY_TYPE'] && 'directory' == $arProp['USER_TYPE'] && CIBlockPriceTools::checkPropDirectory($arProp))
 		{
 			$arHighloadPropList[$arProp['CODE']] = $strPropName;

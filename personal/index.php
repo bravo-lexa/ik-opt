@@ -2,15 +2,20 @@
 // * SEO - - -
 $APPLICATION->SetTitle("О магазине");
 // * END ?>
-
 <div class="container">
 	<div class="container-main">
 		<div class="container-main-aside">
 			<div class="user__aside" data-js-resize="user__aside__menu" data-size="md">
                 <?if(CUser::IsAuthorized()):?>
-                    <i>&mdash; Здраствуйте</i><br/>
-                    <?=(CUser::GetFirstName())?CUser::GetFirstName():CUser::GetLogin()?><br/>
-                    <img src="/путь_к_баннеру.png"/>
+                    <div class="user__aside__hello">
+                        <span>&mdash; Здраствуйте</span>
+                    </div>
+                    <div class="user__aside__name">
+                        <?=(CUser::GetFirstName())?CUser::GetFirstName():CUser::GetLogin()?>
+                    </div>
+                    <div class="user__aside__status">
+                        <span><?=APP::User()->get_group()['1']['NAME']?></span>
+                    </div>
                 <?else:?>
                     <div class="user__aside__menu">
                         <a href="/user/registration/"><span>Регистрация</span></a>
@@ -95,6 +100,4 @@ $APPLICATION->SetTitle("О магазине");
 		</div>
 	</div>
 </div>
-
-
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

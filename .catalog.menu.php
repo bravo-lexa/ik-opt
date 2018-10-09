@@ -19,22 +19,15 @@ if(CModule::IncludeModule('iblock'))
 
 $aMenuLinks = Array(
     Array(
-        "Бренды",
-        "/o-magazine/",
-        Array(),
-        Array(),
-        ""
-    ),
-    Array(
         "Оптовикам",
-        "/o-magazine/",
+        "/discount/",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Контакты",
-        "/o-magazine/",
+        "/contact/",
         Array(),
         Array(),
         ""
