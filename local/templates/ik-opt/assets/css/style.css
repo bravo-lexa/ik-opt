@@ -7285,7 +7285,7 @@ iframe {
   src: url("/assets/fonts/typicons/typicons.eot");
   src: url("/assets/fonts/typicons/typicons.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/typicons/typicons.woff") format("woff"), url("/assets/fonts/typicons/typicons.ttf") format("truetype"), url("/assets/fonts/typicons/typicons.svg#typicons") format("svg"); }
 
-.icon, .form-select, .form-file-img.is-delete, .form-file-img.is-delete:hover, .form-file-img.is-delete:focus, .form-file-img.is-upload, .header__main__search__btn {
+.icon, .form-select, .form-file-img.is-delete, .form-file-img.is-delete:hover, .form-file-img.is-delete:focus, .form-file-img.is-upload, .header__main__search__btn, .search__page__input__btn {
   /* Code for individual icons */ }
   .icon-svg {
     position: relative;
@@ -7295,7 +7295,7 @@ iframe {
     height: 20px;
     fill: currentColor;
     overflow: hidden; }
-  .icon:before, .form-select:before, .form-file-img.is-delete:before, .form-file-img.is-delete:hover:before, .form-file-img.is-delete:focus:before, .form-file-img.is-upload:before, .header__main__search__btn:before {
+  .icon:before, .form-select:before, .form-file-img.is-delete:before, .form-file-img.is-delete:hover:before, .form-file-img.is-delete:focus:before, .form-file-img.is-upload:before, .header__main__search__btn:before, .search__page__input__btn:before {
     font-family: 'typicons';
     font-style: normal;
     font-weight: normal;
@@ -8915,7 +8915,7 @@ iframe {
             color: #2662de; }
           .aside__menu__list li a.is-hidden {
             display: none; }
-          .aside__menu__list li a.is-status-2 .icon, .aside__menu__list li a.is-status-2 .form-select, .aside__menu__list li a.is-status-2 .form-file-img.is-delete, .aside__menu__list li a.is-status-2 .form-file-img.is-upload, .aside__menu__list li a.is-status-2 .header__main__search__btn {
+          .aside__menu__list li a.is-status-2 .icon, .aside__menu__list li a.is-status-2 .form-select, .aside__menu__list li a.is-status-2 .form-file-img.is-delete, .aside__menu__list li a.is-status-2 .form-file-img.is-upload, .aside__menu__list li a.is-status-2 .header__main__search__btn, .aside__menu__list li a.is-status-2 .search__page__input__btn {
             color: #c2cada; }
       .aside__menu__list .id {
         float: right;
@@ -10898,3 +10898,29 @@ iframe {
 
 .bitrix-include > div {
   display: initial; }
+
+.search__page__input {
+  position: relative;
+  width: 100%;
+  margin-top: 10px; }
+  .search__page__input__control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+    background: none;
+    padding: 0 40px 0 20px;
+    color: #0f0f0f;
+    font-size: 13px; }
+  .search__page__input__btn {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    background: transparent;
+    border: 0; }
+    .search__page__input__btn svg {
+      width: 20px; }
+    .search__page__input__btn:hover {
+      cursor: pointer; }
+      .search__page__input__btn:hover svg {
+        fill: #418ee6; }

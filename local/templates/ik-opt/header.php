@@ -112,7 +112,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
                                         <use xlink:href="#icon-user"></use>
                                     </svg>
                                 </i>
-                                <span>Профиль</span>
+                                <span><?=APP::User()->get_name_full()?></span>
                             </a>
                             <a href="<?echo $APPLICATION->GetCurPageParam("logout=yes", array(
                                 "login",
@@ -120,14 +120,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
                                 "register",
                                 "forgot_password",
                                 "change_password"));?>"><span>Выход</span></a>
-                            <a href="/" class="is-basket">
-                                <i>
-                                    <svg role="img" class="icon-svg">
-                                        <use xlink:href="#icon-bascket"></use>
-                                    </svg>
-                                </i>
-                                <span></span>
-                            </a>
                         <?endif;?>
                     </div>
                 </div>
@@ -143,7 +135,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
                 <div class="row-table row-lg-table-none">
                     <div class="col-6 col-xl-5 col-md-none">
                         <div class="header__main__logo">
-                            <img src="<?=SITE_TEMPLATE_PATH?>/assets/images/logo.gif">
+                            <a href="/">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/assets/images/logo.gif">
+                            </a>
                         </div>
                         <div class="header__main__logo__text">
                             <span class="bitrix-include"><? $APPLICATION->IncludeFile(SITE_DIR . "local/include/header/logo_text.php", Array(), Array("MODE" => "text")); ?></span>
@@ -192,24 +186,35 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/lib/App.php');
                         </div>
                         <div class="row-table row-lg-table-none">
                             <div class="col-24">
-                                <div class="header__main__search" data-js-resize="header-search" data-width="lg">
-                                    <input type="search" name="search" class="header__main__search__control" value="" placeholder="Поиск по названию или артикулу" autocomplete="off" spellcheck="false" dir="auto">
-                                    <button class="header__main__search__btn">
-                                        <svg role="img" class="icon-svg">
-                                            <use xlink:href="#icon-search"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <form action="/catalog/">
+                                    <div class="header__main__search" data-js-resize="header-search" data-width="lg">
+                                        <input type="search" name="q" class="header__main__search__control" value="" placeholder="Поиск по названию или артикулу" autocomplete="off" spellcheck="false" dir="auto">
+                                        <button class="header__main__search__btn">
+                                            <svg role="img" class="icon-svg">
+                                                <use xlink:href="#icon-search"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                     <div class="col-1 col-sm-none"></div>
                     <div class="col-6 col-lg-7 col-md-10 col-sm-none">
-                        <div class="header__main__basket">
-                            <div class="header__main__basket__title"><span>Ваша корзина</span></div>
-                            <div class="header__main__basket__inf"><a href="">27 товаров</a> на 3 126 руб.</div>
-                            <div class="header__main__basket__btn"><a href="" class="btn">Оформить заказ</a></div>
-                        </div>
+                        <?$APPLICATION->IncludeComponent("bitrix:sale.basket.basket.line", "default", Array(
+	"PATH_TO_BASKET" => SITE_DIR."personal/cart/",	// Страница корзины
+		"PATH_TO_PERSONAL" => SITE_DIR."personal/",	// Страница персонального раздела
+		"SHOW_PERSONAL_LINK" => "N",	// Отображать персональный раздел
+		"SHOW_NUM_PRODUCTS" => "Y",	// Показывать количество товаров
+		"SHOW_TOTAL_PRICE" => "Y",	// Показывать общую сумму по товарам
+		"SHOW_PRODUCTS" => "N",	// Показывать список товаров
+		"POSITION_FIXED" => "N",	// Отображать корзину поверх шаблона
+		"SHOW_AUTHOR" => "Y",	// Добавить возможность авторизации
+		"PATH_TO_REGISTER" => SITE_DIR."login/",	// Страница регистрации
+		"PATH_TO_PROFILE" => SITE_DIR."personal/",	// Страница профиля
+	),
+	false
+);?>
                     </div>
                     <div class="col-0 col-lg-24" data-js-resize-after="header-search"></div>
                 </div>

@@ -19,4 +19,11 @@ class Text {
         $value = strip_tags($value);    // Удалем HTML и PHP тэги
         return $value;
     }
+
+    public function point($value , $max_number){
+        if (strlen($value) > $max_number) {
+            $value = substr($value, 0, $max_number - 3).'...';
+        }
+        return $value;
+    }
 }

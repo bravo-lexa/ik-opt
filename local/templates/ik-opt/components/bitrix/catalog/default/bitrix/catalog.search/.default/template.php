@@ -12,6 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<div class="container-fluid">
+    <div class="container">
+
 <?
 $arElements = $APPLICATION->IncludeComponent(
 	"bitrix:search.page",
@@ -166,3 +169,5 @@ elseif (is_array($arElements))
 	echo GetMessage("CT_BCSE_NOT_FOUND");
 }
 ?>
+    </div>
+</div>

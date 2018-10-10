@@ -32,6 +32,9 @@ class User {
     {
 
     }
+    public function get_name_full (){
+        return trim(\CUser::GetFullName());
+    }
     public function get_group ()
     {
 
