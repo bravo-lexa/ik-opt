@@ -8,7 +8,8 @@ var CORE = {
         // Обнавляем переменные
         this.update();
         // Загружаем классы
-        this._loadPlugin('form', jsForm);
+        this._loadPlugin(jsForm);
+        this._loadPlugin(jsBasketAdd);
     },
     update: function() {
         this.appWight = $(window).width() + 15;
@@ -76,6 +77,7 @@ var CORE = {
     // Формы
     formData: function ($this){
         var formData = new FormData();
+
         // * Переберам все data переменные
         // * Для отправки
         // $.each($this.data(), function(key, value) {
@@ -100,6 +102,37 @@ var CORE = {
                 formData.append(this.name, $(this).is(':checked'));
             }
         });
+
+        return formData;
+    },
+    get_form_data: function($this){
+        var formData = new FormData();
+            formData.append('form', null);
+
+
+        // * Переберам все data переменные
+        // * Для отправки
+        $.each($this.data(), function(key, value) {
+            formData.append(key, value);
+        });
+
+        // * Перебираем все поля
+        $this.find('input, textarea, select').each(function() {
+            formData.form.append(this.name, $(this).val());
+
+            if($($this).is('[type=file]')) {
+                formData.form.append(this.name, $(this).attr('value'));
+            }
+            if($(this).is('[type=checkbox]')){
+                formData.form.append(this.name, $(this).is(':checked'));
+            }
+        });
+        // * Присоединяем все файлы
+        if($this.find('[type=file]').is('input')){ // Если нашки хоть один
+            $.each($('[type=file]'), function(key, file) {
+                formData.form.append($(file).attr('name'), $(file)[0].files[0]);
+            });
+        }
 
         return formData;
     },
@@ -130,8 +163,11 @@ var CORE = {
         }
     },
 
+    text_to_up_all: function($value){
+        return $value.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' ');
+    },
     // Плагины
-    _loadPlugin( name, $class ){
+    _loadPlugin( $class ){
         // Считываем все переменные
         $class._constructor();
         // Добавяем класс в работу
@@ -148,8 +184,17 @@ var CORE = {
                 $class._data($this);
                 // Соединяем дата данные - DATA
                 var $data = $.merge($class.data, $this.data());
+
                 // Сохраняем дата
                 $this.data($data);
+
+                // Удаляем ненудные элементы
+                // И добляем поле this
+                var name_code = 'js'+CORE.text_to_up_all($class.code.replace(/-/g, ' ')).replace(/\s/g, '');
+                       $this.data('this', $this.data(name_code));
+                delete $this.removeData(name_code);
+                delete $this.removeData(['length']);
+
 
                 // Запускаем функицию
                 $class._init(fn , $this);
@@ -161,7 +206,7 @@ var CORE = {
                 // console.log('- - - - - - - - - - - - ');
             });
         }else{
-            console.log('Плагин: ' + name + ' пустой');
+            console.log('Плагин: ' + $class + ' пустой');
         }
     },
 },
@@ -245,6 +290,86 @@ var CORE = {
 
         }
     };
+    jsBasketAdd = {
+    /*
+        * Настройки и код обращения
+    */
+    _constructor: function () {
+        this.code   = 'basket-add'; // data код
+        this.option = {
+            'id': 'null',
+            'code': 'null',
+        };
+    },
+    /*
+        * Добавочные свойство data
+        * Чтобы все работало нужно дотавить все в массив this.data.(Ваша переменная)
+    */
+    _data: function ($this) {
+        this.data.ajax    = '/catalog/basket/add';
+        this.data.id      = $this.data('id');
+        this.data.param   = $this.data('param');
+    },
+
+    // Запуск функии от элемента
+    _init: function (fn, $this) {
+        // * При нажатии ничего не происходит, только отравка
+        $this.on('click', function (e) {
+            e.preventDefault();
+            fn.click(fn, $this);
+        });
+    },
+    // *
+    // Добавочные функии
+    // *
+    click: function (fn, $this)     {
+        this.ajax(fn, $this);
+    },
+    // Отправка данных
+    ajax: function (fn, $this) {
+        // * Создаем экземпляр, тут будем хранить всю информацию для отправки
+        var this_class = this;
+
+        $.ajax({
+            url: '/local/ajax/' + $this.data('ajax') + '.php',
+            type: 'post',
+            data: CORE.get_form_data($this),
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                // Если нет ошибки и пришел json
+                if (CORE.is_json(data)) {
+                    //  Переводим json в массив
+                    data = CORE.json_to_array(data);
+
+                    CORE.formValid($this, data);
+                    // LOG
+                    console.log($this);
+                    console.log(data);
+                    // END
+
+                    if (data['result'] === 'success') {
+                        this_class.returnSuccess($this, data);
+                    } else {
+                        this_class.returnError($this, data);
+                    }
+                } else {
+                    $this.html(data);
+                }
+            }
+        });
+    },
+
+    // Положительный ответ
+    returnSuccess: function ($this, data) {
+        BX.onCustomEvent('OnBasketChange');
+        $.fancybox.open($('#feedback-success'));
+    },
+    // Отрицательный ответ
+    returnError: function ($this, data) {
+
+    }
+};
 
 // * * * * * * Запуск
 $(function () {

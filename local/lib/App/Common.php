@@ -19,8 +19,14 @@ class Common
             border: 2px solid #ffc10745;
         ";
         echo '<pre style="'.$style.'">';
-        print_r($array);
+        if(!empty($array)){
+            print_r($array);
+        }else{
+            echo 'Массив пустой!';
+        }
         echo '</pre>';
+
+
         return true;
     }
 

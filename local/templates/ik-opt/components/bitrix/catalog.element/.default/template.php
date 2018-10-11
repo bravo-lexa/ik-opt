@@ -162,8 +162,15 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
         <div class="catalog__detail">
         <div class="row">
             <div class="col-6 col-lg-24">
-                <a href="/assets/images/catalog/item.jpg" class="catalog__detail__img" data-fancybox="images">
-                    <div class="catalog__detail__img__pic" style="background-image: url('/assets/images/catalog/item.jpg')"></div>
+                <a class="catalog__detail__img" data-fancybox="images" href="/assets/images/catalog/item.jpg">
+                    <?
+                    if (!empty($actualItem['MORE_PHOTO'])) {
+                        foreach ($actualItem['MORE_PHOTO'] as $key => $photo)
+                        {?>
+                            <div class="catalog__detail__img__pic" style="background-image: url('<?=$photo['SRC']?>')"></div>
+                        <?}
+                    }
+                    ?>
                     <div class="catalog__detail__img__wrap">
                         <div class="catalog__detail__img__btn">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" version="1.1">
@@ -173,7 +180,15 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                             </svg>
                         </div>
                     </div>
+                    <div class="catalog__detail__img__slider">
+                        <?if (!empty($actualItem['MORE_PHOTO'])) {
+                            foreach ($actualItem['MORE_PHOTO'] as $key => $photo) { ?>
+                                <div class="catalog__detail__img__slider__item" style="background-image: url('<?=$photo['SRC']?>')"></div>
+                        <? } } ?>
+                    </div>
                 </a>
+                </div>
+                <div class="catalog__detail__count"></div>
                 <div class="catalog__detail__price" id="<?=$itemIds['PRICE_ID']?>">
                     <strong><?=$price['PRINT_RATIO_PRICE']?></strong>
                 </div>
