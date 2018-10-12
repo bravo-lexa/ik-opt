@@ -309,6 +309,7 @@ var CORE = {
         this.data.ajax    = '/catalog/basket/add';
         this.data.id      = $this.data('id');
         this.data.param   = $this.data('param');
+        this.data.count   = null;
     },
 
     // Запуск функии от элемента
@@ -322,8 +323,15 @@ var CORE = {
     // *
     // Добавочные функии
     // *
-    click: function (fn, $this)     {
+    click: function (fn, $this) {
+        $this.data().count = this.get_count($this);
         this.ajax(fn, $this);
+    },
+    get_count: function($this) {
+        return $('[data-js-catalog-item-count="' + $this.data('id') + '"]').val();
+    },
+    set_count: function($this, $value) {
+        return $('[data-js-catalog-item-count="' + $this.data('id') + '"]').val($value);
     },
     // Отправка данных
     ajax: function (fn, $this) {
@@ -363,6 +371,7 @@ var CORE = {
     // Положительный ответ
     returnSuccess: function ($this, data) {
         BX.onCustomEvent('OnBasketChange');
+        this.set_count($this, 1);
         $.fancybox.open($('#feedback-success'));
     },
     // Отрицательный ответ

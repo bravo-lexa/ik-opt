@@ -22,7 +22,6 @@ use \Bitrix\Main\Localization\Loc;
  */
 ?>
 
-
 <div class="item">
     <div class="item__wrap">
         <div class="item__img">
@@ -53,7 +52,7 @@ use \Bitrix\Main\Localization\Loc;
                     <div class="row">
                         <div class="col-12">
                             <div class="item__content__input form-input">
-                                <input type="text" value="" placeholder="" class="form-input-control">
+                                <input type="text" value="" placeholder="" class="form-input-control" data-js-catalog-item-count="<?=$item['ID']?>">
                             </div>
                             <div class="item__content__input-text">
                                 <span>по 1 шт.</span>
@@ -61,7 +60,7 @@ use \Bitrix\Main\Localization\Loc;
                         </div>
                         <div class="col-12">
                             <div class="item__content__btn-basket">
-                                <button class="btn" data-js-basket-add="" data-id="1" data-param="">
+                                <button class="btn" data-js-basket-add="" data-id="<?=$item['ID']?>" data-param="">
                                     <svg role="img" class="icon-svg">
                                         <use xlink:href="#icon-basket"></use>
                                     </svg>
