@@ -158,8 +158,6 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 }
 ?>
 
-
-
     <div class="catalog is-bg-white container-fluid">
         <div class="container">
             <div class="catalog__detail">
@@ -191,20 +189,18 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                             </div>
                         </a>
 
-                        <div class="catalog__detail__img__list">
-                            <div class="catalog__detail__img__list__item">
-                                <div class="catalog__detail__img__list__item__control" style="background: url('')"></div>
+                        <?if(!empty($actualItem['MORE_PHOTO'])):?>
+                            <div class="catalog__detail__img__list owl-carousel">
+                                <div class="catalog__detail__img__list__item">
+                                    <div class="catalog__detail__img__list__item__control" style="background-image: url('<?=$actualItem['PREVIEW_PICTURE']['SRC']?>')"></div>
+                                </div>
+                                <?foreach($actualItem['MORE_PHOTO'] as $key => $photo):?>
+                                    <div class="catalog__detail__img__list__item">
+                                        <div class="catalog__detail__img__list__item__control" style="background-image: url('<?=$photo['SRC']?>')"></div>
+                                    </div>
+                                <?endforeach;?>
                             </div>
-                            <div class="catalog__detail__img__list__item">
-                                <div class="catalog__detail__img__list__item__control" style="background: url('')"></div>
-                            </div>
-                            <div class="catalog__detail__img__list__item">
-                                <div class="catalog__detail__img__list__item__control" style="background: url('')"></div>
-                            </div>
-                            <div class="catalog__detail__img__list__item">
-                                <div class="catalog__detail__img__list__item__control" style="background: url('')"></div>
-                            </div>
-                        </div>
+                        <?endif;?>
 
                         <div class="catalog__detail__price"><strong>3 135</strong><span> руб.</span></div>
                         <div class="catalog__detail__links">
@@ -212,6 +208,7 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
                         </div>
                     </div>
                     <div class="col-17 col-lg-24">
+                        <?APP::Common()->drop($actualItem)?>
                         <div class="row">
                             <div class="col-24">
                                 <div class="catalog__detail__title"><span>Купальник женский №21, арт.</span></div>

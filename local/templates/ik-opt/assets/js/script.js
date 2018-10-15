@@ -423,6 +423,31 @@ $(function () {
             }
         }
     });
+    $('.catalog__detail__img__list').owlCarousel({
+        items: 4,
+        lazyLoad:true,
+        loop: false,
+        margin: 0,
+        dots: false,
+        nav: true,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:5
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
 });
 
 
