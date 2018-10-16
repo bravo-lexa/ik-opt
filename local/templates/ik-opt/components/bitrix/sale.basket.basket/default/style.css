@@ -15,7 +15,7 @@
 	padding: 15px 25px;
 	border: 1px solid #e2dfdf;
 	border-radius: 2px;
-	background-color: #fff;
+	background: #f5f5ed;
 	opacity: 1;
 	transition: opacity 250ms ease;
 	-webkit-box-pack: justify;
@@ -43,7 +43,10 @@
 
 .basket-coupon-block-field-description {
 	color: #a1a1a1;
-	font: 400 12px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 10px;
+	/*font: 400 12px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
 
 .basket-coupon-block-field {
@@ -200,7 +203,9 @@
 
 .basket-checkout-block-total-title {
 	color: #2f3435;
-	font: 400 20px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	/*font: 400 20px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
 
 .basket-checkout-block-total-description {
@@ -226,7 +231,8 @@
 	color: #2f3435;
 	text-align: right;
 	white-space: nowrap;
-	font: 400 36px/36px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	/*font: 400 36px/36px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 	transition: 180ms text-shadow ease, 180ms color ease;
 }
 
@@ -261,7 +267,7 @@
 
 /**/
 .basket-checkout-block-btn {
-	padding-top: 13px;
+	padding-top: 22px;
 	padding-left: 15px;
 	text-align: right;
 }
@@ -520,7 +526,7 @@
 
 .basket-items-list {
 	position: relative;
-	padding: 0 25px;
+	/*padding: 0 25px;*/
 }
 
 .basket-items-list-table {
@@ -573,7 +579,7 @@
 .basket-items-list-item-descriptions {
 	-ms-flex-order: 1;
 	padding-top: 20px;
-	width: 100%;
+	width: 50%;
 	vertical-align: top;
 	-webkit-box-ordinal-group: 2;
 	order: 1;
@@ -591,7 +597,8 @@
 	position: relative;
 	-ms-flex-order: 1;
 	padding-right: 15px;
-	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-bottom: 20px;
 	min-width: 48px;
 	max-width: 148px;
 	width: 100%;
@@ -1174,6 +1181,7 @@ h2.basket-item-info-name {
 
 /*region Amount*/
 .basket-items-list-item-amount {
+	position: relative;
 	-ms-flex-order: 3;
 	padding-top: 20px;
 	vertical-align: top;
@@ -1182,6 +1190,7 @@ h2.basket-item-info-name {
 }
 
 .basket-item-block-amount {
+	margin-top: 16px;
 	position: relative;
 	display: -ms-flexbox;
 	display: -webkit-box;
@@ -1192,7 +1201,7 @@ h2.basket-item-info-name {
 	-ms-flex-line-pack: start;
 	align-content: flex-start;
 	-webkit-box-pack: end;
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 .basket-items-list-wrapper-compact .basket-item-block-amount {
@@ -1347,7 +1356,8 @@ h2.basket-item-info-name {
 /*region Price*/
 .basket-items-list-item-price {
 	-ms-flex-order: 4;
-	padding-top: 0;
+	/*padding-top: 20px;*/
+	padding: 20px 20px 0;
 	vertical-align: top;
 	-webkit-box-ordinal-group: 5;
 	order: 4;

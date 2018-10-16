@@ -158,7 +158,7 @@ if (empty($arResult['ERROR_MESSAGE']))
 		)
 		{
 			?>
-			<div class="container-fluid">
+			<div class="container-fluid basket__top">
 				<div class="container" data-entity="basket-total-block"></div>
 			</div>
 			<?
@@ -177,8 +177,8 @@ if (empty($arResult['ERROR_MESSAGE']))
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-xs-12">
+		<div class="container-fluid basket__content">
+			<div class="container">
 				<div class="basket-items-list-wrapper basket-items-list-wrapper-height-fixed basket-items-list-wrapper-light<?=$displayModeClass?>"
 					id="basket-items-list-wrapper">
 					<div class="basket-items-list-header" data-entity="basket-items-list-header">
@@ -212,7 +212,7 @@ if (empty($arResult['ERROR_MESSAGE']))
 									<?=Loc::getMessage('SBB_FILTER_EMPTY_RESULT')?>
 								</div>
 							</div>
-							<table class="basket-items-list-table" id="basket-item-table"></table>
+							<table class="basket-items-list-table basket__list" id="basket-item-table"></table>
 						</div>
 					</div>
 				</div>

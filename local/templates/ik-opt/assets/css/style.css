@@ -4201,6 +4201,7 @@ b {
   font-weight: bold; }
 
 hr {
+  margin: 7px 0;
   border: 1px solid rgba(0, 0, 0, 0.04); }
 
 iframe {
@@ -8338,10 +8339,13 @@ iframe {
 .breadcrumbs {
   padding: 15px 0 15px;
   border-bottom: 1px solid #f5f5f5;
-  background: #fbfbfb;
-  color: #f1f1f1; }
+  background: #f5f5ed;
+  letter-spacing: 0.8px;
+  font-size: 13px;
+  color: #6d6d6d; }
   .breadcrumbs__link, .breadcrumbs__first, .breadcrumbs__last {
-    display: inline-block; }
+    display: inline-block;
+    padding-right: 7px; }
   .breadcrumbs a {
     letter-spacing: 0.3px;
     font-size: 14px; }
@@ -8353,9 +8357,8 @@ iframe {
       border-bottom: 1px dotted #d0d0d0;
       font-weight: normal; }
   .breadcrumbs span {
-    letter-spacing: 0.3px;
+    letter-spacing: 0.8px;
     font-size: 13px;
-    font-weight: bold;
     color: #6d6d6d; }
 
 .pagination {
@@ -10380,6 +10383,12 @@ iframe {
 
 .basket {
   margin-bottom: 40px; }
+  .basket__top {
+    padding-top: 20px;
+    background: #fff; }
+  .basket__content {
+    padding-top: 20px;
+    padding-bottom: 10px; }
   .basket__title {
     position: relative;
     margin: 40px 20px 20px;
@@ -10405,6 +10414,7 @@ iframe {
       padding-right: 25px;
       padding-left: 20px; }
   .basket__list .item {
+    position: relative;
     margin-bottom: 20px;
     border-bottom: 1px solid #efefef;
     background: #fdfdfd;
@@ -10416,6 +10426,8 @@ iframe {
       position: relative;
       overflow: hidden;
       height: 100px;
+      width: 100%;
+      display: block;
       margin-top: 2px;
       border-radius: 5px;
       box-shadow: 0 3px 5px #d8d5d5;
@@ -10454,8 +10466,10 @@ iframe {
       position: relative;
       margin-bottom: 20px;
       padding: 0 20px; }
-      .basket__list .item__data__text a {
-        border-bottom: 1px dotted #d0d0d0; }
+      .basket__list .item__data__text {
+        font-size: 14px; }
+        .basket__list .item__data__text a {
+          border-bottom: 1px dotted #d0d0d0; }
       .basket__list .item__data__btn-table a {
         background: #8BC34A;
         color: #ffffff;
@@ -10469,7 +10483,7 @@ iframe {
         letter-spacing: 0.6px; }
       .basket__list .item__data__delete {
         position: absolute;
-        top: 8px;
+        top: 17px;
         right: 20px;
         border: 2px solid #418ee6;
         box-shadow: 0 0 2px #418ee6;

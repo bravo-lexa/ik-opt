@@ -24,7 +24,7 @@ $strReturn .= '
     <div class="container-fluid">
     <div class="breadcrumbs" itemprop="http://schema.org/breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
     <div class="container">
-        <div class="breadcrumbs__link"><a href="/">Главная</a></div>&nbsp;&gt;&nbsp;
+        <div class="breadcrumbs__link"><a href="/">Главная</a></div>&gt;&nbsp;
 ';
 
 $itemSize = count($arResult);
@@ -32,7 +32,7 @@ for($index = 0; $index < $itemSize; $index++)
 {
 	$title = htmlspecialcharsex($arResult[$index]["TITLE"]);
 	//$arrow = ($index > 0? '<i class="fa fa-angle-right"></i>' : '');
-    $arrow = ($index > 0? '&nbsp;&gt;&nbsp;' : '');
+    $arrow = ($index > 0? '&gt;&nbsp;' : '');
 
 	if($arResult[$index]["LINK"] <> "" && $index != $itemSize - 1)
 	{
