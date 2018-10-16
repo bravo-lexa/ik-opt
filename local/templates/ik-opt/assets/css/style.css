@@ -4115,7 +4115,7 @@ html {
 
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: 0.9em;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: 0.3px;
@@ -7015,7 +7015,7 @@ iframe {
       position: absolute;
       left: 100%;
       top: 50%;
-      margin-top: -0.9em;
+      margin-top: -13px;
       padding-left: 10px; }
   .form-title {
     margin-bottom: 20px;

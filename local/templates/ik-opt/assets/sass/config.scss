@@ -8,7 +8,7 @@ $font-icon:    'Icon v2';               // Шрифт с иконками
 @include font-face('Circle', '/assets/fonts/Circe/Circe-Bold', bold, normal, eot woff ttf);
 
 // Размер шрифта
-$font-size:                    0.9em      !default; // Стандартый шрифт
+$font-size:                    13px      !default; // Стандартый шрифт
 $font-size-small:              0.8571em   !default;
 $font-size-big:                1.2em      !default;
 
